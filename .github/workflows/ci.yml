@@ -10,7 +10,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    # **Crucial Fix:** Grant write permission to the GITHUB_TOKEN
     permissions:
       contents: write
       
@@ -25,5 +24,4 @@ jobs:
         run: pip install mkdocs mkdocs-material
 
       - name: Deploy documentation
-        # mkdocs gh-deploy --force will now have permission to push to gh-pages
         run: mkdocs gh-deploy --force

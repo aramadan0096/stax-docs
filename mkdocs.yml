@@ -19,6 +19,6 @@ theme:
     scheme: slate
     primary: '#123a58'
     accent: '#123a58'
-  logo: assets/Docs.svg
+  logo: assets/docs.svg
   favicon: assets/logo.png
   copyright: 'Ahmed Ramadan'

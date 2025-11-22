@@ -30,12 +30,6 @@ StaX helps VFX artists and studios manage large collections of stock footage, 3D
 
 ---
 
-## Documentation
-
-- **[documentation.md](documentation.md)**: An internal reference describing StaX features, installation, and usage.
-
----
-
 ## Project Status
 
 **Current Phase:** Beta  

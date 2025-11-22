@@ -1,19 +1,24 @@
 site_name: StaX Documentation
 site_description: Official documentation for the StaX project.
-site_url: #https://stax.example.com
-repo_url: #https://github.com/stax/stax
+site_url: https://aramadan0096.github.io/stax-docs/
+repo_url: https://github.com/aramadan0096/Stax
 extra:
   generator: false
 nav:
   - Home: index.md
-  - Overview: README.md
-  - Documentation: documentation.md
-  - User Guide: user-guide.md
+  - How StaX Works: HowStaXWorks.md  
+  - Installation: Installation.md
+  - Configuration: Configuration.md
+  - Keyboard Shortcuts: KeyboardShortcuts.md
+  - Nuke Plugin Usage: NukePluginUsage.md
+  - Advanced Features: AdvancedFeatures.md
+  - Troubleshooting: Troubleshooting.md
 theme:
   name: material
   palette:
     scheme: slate
     primary: '#123a58'
     accent: '#123a58'
-  logo: assets/logostax.png
+  logo: assets/Docs.svg
+  favicon: assets/logo.png
   copyright: 'Ahmed Ramadan'

@@ -2,16 +2,18 @@
 name: Deploy Docs
 
 on:
-
   push:
     branches:
       - main
-
   workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # **Crucial Fix:** Grant write permission to the GITHUB_TOKEN
+    permissions:
+      contents: write
+      
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
@@ -20,9 +22,8 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-
         run: pip install mkdocs mkdocs-material
 
       - name: Deploy documentation
-
+        # mkdocs gh-deploy --force will now have permission to push to gh-pages
         run: mkdocs gh-deploy --force

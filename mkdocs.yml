@@ -1,0 +1,9 @@
+site_name: StaX Documentation
+site_description: Official documentation for the StaX project.
+site_url: #https://stax.example.com
+repo_url: #https://github.com/stax/stax
+nav:
+  - main: index.md
+  - دليل المستخدم: user-guide.md # سيتم إنشاؤها لاحقاً
+theme:
+  name: material

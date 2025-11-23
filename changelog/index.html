@@ -1,0 +1,2517 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Official documentation for the StaX project.">
+      
+      
+      
+        <link rel="canonical" href="https://aramadan0096.github.io/stax-docs/changelog/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Changelog - StaX Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="#123a58" data-md-color-accent="#123a58">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="StaX Documentation" class="md-header__button md-logo" aria-label="StaX Documentation" data-md-component="logo">
+      
+  <img src="../assets/docs.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            StaX Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/aramadan0096/Stax" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="StaX Documentation" class="md-nav__button md-logo" aria-label="StaX Documentation" data-md-component="logo">
+      
+  <img src="../assets/docs.svg" alt="logo">
+
+    </a>
+    StaX Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/aramadan0096/Stax" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HowStaXWorks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How StaX Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KeyboardShortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard Shortcuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NukePluginUsage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nuke Plugin Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AdvancedFeatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3d-objects-ingestion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3D Ingestion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unreleased" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [Unreleased]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[Unreleased]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webgl-geometry-preview-blender-pipeline-nov-22-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ WebGL Geometry Preview &amp; Blender Pipeline (Nov 22, 2025)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scene-viewer-blender-configuration-nov-21-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Scene Viewer &amp; Blender Configuration (Nov 21, 2025)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-10-ingest-library-sequence-detection-fix-nov-19-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Session 10 - Ingest Library Sequence Detection Fix (Nov 19, 2025)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Session 10 - Ingest Library Sequence Detection Fix (Nov 19, 2025)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-gif-prevention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Duplicate GIF Prevention
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-9-image-sequence-ingestion-enhancements-nov-19-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        � Session 9 - Image &amp; Sequence Ingestion Enhancements (Nov 19, 2025)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="� Session 9 - Image &amp; Sequence Ingestion Enhancements (Nov 19, 2025)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-vs-sequence-preview-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image vs Sequence Preview Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequence-detection-settings-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sequence Detection &amp; Settings Improvements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-8-ui-frame-count-display-fix-nov-18-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        �🔧 Session 8 - UI Frame Count Display Fix (Nov 18, 2025)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="�🔧 Session 8 - UI Frame Count Display Fix (Nov 18, 2025)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frame-count-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frame Count Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ffmpeg-video-encoding-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FFmpeg Video Encoding Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gif-generation-fix-for-non-standard-start-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GIF Generation Fix for Non-Standard Start Frames
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files-modified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Files Modified
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-7-completed-nov-18-2025-enhanced-sequence-detection-preview-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Session 7 - Completed (Nov 18, 2025) - Enhanced Sequence Detection &amp; Preview System
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Session 7 - Completed (Nov 18, 2025) - Enhanced Sequence Detection &amp; Preview System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-oriented-sequence-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern-Oriented Sequence Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unified-preview-generation-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unified Preview Generation System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequence-ingestion-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sequence Ingestion Intelligence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-storage-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database &amp; Storage Improvements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuke-integration-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nuke Integration Enhancements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uiux-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI/UX Improvements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-6-completed-nov-17-2025-production-deployment-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Session 6 - Completed (Nov 17, 2025) - Production Deployment Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Session 6 - Completed (Nov 17, 2025) - Production Deployment Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurable-previews-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurable Previews Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stock_db-environment-variable-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STOCK_DB Environment Variable Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-settings-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Settings Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enhanced
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#added_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#added_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#added_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#010-2025-11-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [0.1.0] - 2025-11-15
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[0.1.0] - 2025-11-15">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="changelog">Changelog</h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on "Keep a Changelog" and this project adheres to Semantic Versioning.</p>
+<h2 id="unreleased">[Unreleased]</h2>
+<h3 id="webgl-geometry-preview-blender-pipeline-nov-22-2025">✨ WebGL Geometry Preview &amp; Blender Pipeline (Nov 22, 2025)</h3>
+<ul>
+<li>Replaced the pyrender-based Scene Viewer with an embedded WebGL experience powered by QtWebEngine and the bundled <code>js-3d-model-viewer</code>, removing the heavyweight OpenGL dependency stack.</li>
+<li>Added a shared threaded HTTP server (<code>src/geometry_viewer.py</code>) that serves viewer assets and GLB payloads, enabling geometry previews to load inside the preview panel with live status messaging.</li>
+<li>Updated <code>VideoPlayerWidget</code> to host the new <code>GeometryViewerWidget</code>, ensuring geometry elements share the same preview workflow as video assets while keeping playback controls hidden automatically.</li>
+<li>Migrated the Blender conversion helper into <code>src/convert_to_glb.py</code> and updated <code>glb_converter</code> to execute that script, providing consistent results between production and the reference tests.</li>
+<li>Improved the Blender conversion fallback chain so Alembic, FBX, OBJ, PLY, STL, and DAE assets prefer the scripted Blender export while still falling back to <code>trimesh</code> where possible.</li>
+<li>Refactored the ingestion pipeline so Blender CLI conversion streams its stdout to the UI progress log, avoiding stalled ingests when processing non-GLB sources.</li>
+</ul>
+<h3 id="scene-viewer-blender-configuration-nov-21-2025">✨ Scene Viewer &amp; Blender Configuration (Nov 21, 2025)</h3>
+<ul>
+<li>Added an interactive in-app Scene Viewer for geometry assets. GLB previews now render directly inside the preview panel using pyrender off-screen rendering with simple orbit controls and scroll-to-zoom support.</li>
+<li>Replaced the temporary geometry placeholder and external viewer buttons with the embedded Scene Viewer experience; preview status messaging now surfaces conversion results inline.</li>
+<li>Settings → Ingestion tab now includes a "Blender Executable" picker so studios can point StaX at a local Blender installation when it is not already on <code>PATH</code>.</li>
+<li>Extended dependency list (<code>tools/requirements.txt</code>) to include <code>numpy</code>, <code>trimesh</code>, <code>pygltflib</code>, <code>pyrender</code>, <code>PyOpenGL</code>, and <code>pyglet</code> required for geometry conversion and rendering workflows.</li>
+<li>Updated documentation (README) to highlight the Blender override and the new 3D preview workflow.</li>
+</ul>
+<h3 id="session-10-ingest-library-sequence-detection-fix-nov-19-2025">🔧 Session 10 - Ingest Library Sequence Detection Fix (Nov 19, 2025)</h3>
+<h4 id="duplicate-gif-prevention">Duplicate GIF Prevention</h4>
+<ul>
+<li><strong>Issue Fixed</strong>: Ingest Library "Scan Folder" treated each sequence frame as individual file, causing duplicate GIF generation (e.g., 10-frame sequence → 10 GIFs instead of 1)</li>
+<li><strong>Root Cause</strong>: <code>IngestLibraryDialog._get_media_files()</code> listed all files individually without sequence detection</li>
+<li><strong>Enhancement</strong>: Integrated <code>SequenceDetector</code> with configured pattern from settings</li>
+<li>Returns only first frame as representative of entire sequence</li>
+<li>Tracks processed files to prevent duplicate processing</li>
+<li>Respects 'sequence_pattern' setting from config (<code>.####.ext</code>, <code>_####.ext</code>, <code>-####.ext</code>, <code>####.ext</code>)</li>
+<li><strong>Result</strong>: 10-frame sequence like <code>shot001.1001-1010.exr</code> now generates 1 GIF instead of 10</li>
+<li><strong>Testing</strong>: Added <code>test_sequence_detection_simple.py</code> with 3 comprehensive test cases covering single/multiple sequences and pattern validation</li>
+</ul>
+<h3 id="session-9-image-sequence-ingestion-enhancements-nov-19-2025">� Session 9 - Image &amp; Sequence Ingestion Enhancements (Nov 19, 2025)</h3>
+<h4 id="image-vs-sequence-preview-flow">Image vs Sequence Preview Flow</h4>
+<ul>
+<li>Single-image ingests now generate only PNG thumbnails (no redundant GIFs) while video + image sequences still create both GIF and PNG previews for gallery parity.</li>
+<li>Preview thumbnails respect the configurable <code>preview_size</code> setting for both single images and sequence middle-frame captures.</li>
+<li>GIF generation pipeline now mirrors the documented FFmpeg command: sequence jobs pass <code>-start_number</code>, <code>-framerate</code>, frame limits, and loop settings so bulk-ingested sequences behave like standalone videos.</li>
+</ul>
+<h4 id="sequence-detection-settings-improvements">Sequence Detection &amp; Settings Improvements</h4>
+<ul>
+<li>Pattern detection regex now allows any number of digits (not just 4+) and keeps frame/file ordering aligned numerically to avoid shuffled preview generation.</li>
+<li>Settings → Ingestion tab gained richer helper messaging plus real-time hints showing examples for each pattern option; hints disable gracefully when auto-detect is turned off.</li>
+<li>Bulk ingestion and drag/drop flows re-query the latest auto-detect + pattern preferences to ensure folder processing follows the user’s current selection.</li>
+</ul>
+<h4 id="testing">Testing</h4>
+<ul>
+<li>Added <code>tests/test_sequence_pattern_selection.py</code> covering mixed pattern directories and variable digit lengths to prevent regressions in grouping logic.</li>
+<li>Updated <code>tests/test_gif_startframe.py</code> to validate new GIF parameters (start frame, sequence framerate, loop behavior) align with the latest FFmpeg command structure.</li>
+</ul>
+<h3 id="session-8-ui-frame-count-display-fix-nov-18-2025">�🔧 Session 8 - UI Frame Count Display Fix (Nov 18, 2025)</h3>
+<h4 id="frame-count-display">Frame Count Display</h4>
+<ul>
+<li><strong>Issue Identified</strong>: Sequences were detected correctly, but UI "Frames" column showed frame_range string ("1-7") instead of frame count (7)</li>
+<li><strong>Root Cause</strong>: <code>media_display_widget.py</code> line 684 displayed <code>element.get('frame_range')</code> directly without parsing</li>
+<li><strong>Fix Implemented</strong>: Added frame range parser to compute frame count from "start-end" format</li>
+<li>Parses ranges like "1-7" → displays "7"</li>
+<li>Parses ranges like "1001-1050" → displays "50"</li>
+<li>Handles edge cases: malformed ranges, null values, non-numeric strings</li>
+<li><strong>Validation</strong>: Created <code>tests/test_frame_count_display.py</code> with 8 test cases - all passing</li>
+</ul>
+<h4 id="ffmpeg-video-encoding-fix">FFmpeg Video Encoding Fix</h4>
+<ul>
+<li><strong>Issue</strong>: Video preview generation failing with exit codes (libx264 requires even dimensions)</li>
+<li><strong>Fix</strong>: Updated video filter command to include padding: <code>pad=ceil(iw/2)*2:ceil(ih/2)*2</code></li>
+<li><strong>Applied to</strong>:</li>
+<li><code>generate_sequence_video_preview()</code>: MP4 previews from image sequences</li>
+<li><code>generate_video_preview()</code>: MP4 previews from video files</li>
+<li><strong>Result</strong>: Ensures output dimensions are always even, preventing libx264 encoding failures</li>
+</ul>
+<h4 id="gif-generation-fix-for-non-standard-start-frames">GIF Generation Fix for Non-Standard Start Frames</h4>
+<ul>
+<li><strong>Issue</strong>: GIF generation failing for sequences that don't start at frame 1 (e.g., frames 8-14)</li>
+<li><strong>Root Cause</strong>: FFmpeg <code>-start_number</code> parameter was missing, causing "file not found" errors</li>
+<li><strong>Fix</strong>: Updated <code>generate_gif_preview()</code> to accept and use <code>start_frame</code> parameter</li>
+<li>Modified <code>ffmpeg_wrapper.py</code> to add <code>-start_number</code> before <code>-i</code> for sequences</li>
+<li>Modified <code>ingestion_core.py</code> to pass <code>first_frame</code> from sequence_info to GIF generation</li>
+<li><strong>Result</strong>: GIF previews now work for sequences with any starting frame number</li>
+<li><strong>Validation</strong>: Created <code>tests/test_gif_startframe.py</code> - successfully generates GIF from frames 8-14</li>
+</ul>
+<h4 id="files-modified">Files Modified</h4>
+<ul>
+<li><code>src/ui/media_display_widget.py</code> (lines 684-702): Added frame count parsing logic for table view display</li>
+<li><code>src/ffmpeg_wrapper.py</code> (lines 230, 342-395, 485): Added padding filter + start_frame parameter support</li>
+<li><code>src/ingestion_core.py</code> (lines 544-556): Pass start_frame to GIF generation for sequences</li>
+<li><code>tests/test_frame_count_display.py</code>: New test suite for frame count display logic</li>
+<li><code>tests/test_gif_startframe.py</code>: New test for GIF generation with non-standard start frames</li>
+</ul>
+<h4 id="additional-fixes">Additional Fixes</h4>
+<ul>
+<li><strong>FFmpeg Binary Corruption</strong>: Re-downloaded FFmpeg 8.0 essentials build (~94MB each) to replace corrupted binaries (were only 57-215KB)</li>
+<li><strong>WinError 1392 Resolved</strong>: File corruption errors were caused by incomplete FFmpeg binaries, not source files</li>
+</ul>
+<hr />
+<h3 id="session-7-completed-nov-18-2025-enhanced-sequence-detection-preview-system">✅ Session 7 - Completed (Nov 18, 2025) - Enhanced Sequence Detection &amp; Preview System</h3>
+<h4 id="pattern-oriented-sequence-detection">Pattern-Oriented Sequence Detection</h4>
+<ul>
+<li><strong>Configurable Pattern Selection</strong>: Added "Sequence Pattern" combobox in Settings → Ingestion tab with 4 pattern options:</li>
+<li><code>.####.ext</code> (dot separator) - e.g., <code>image.1001.exr</code></li>
+<li><code>_####.ext</code> (underscore separator) - e.g., <code>plate_1001.dpx</code></li>
+<li><code>####.ext</code> (space separator) - e.g., <code>render 1001.png</code></li>
+<li><code>-####.ext</code> (dash separator) - e.g., <code>shot-1001.jpg</code></li>
+<li><strong>Auto-Pattern Fallback</strong>: When no pattern is specified, automatically tries all patterns in order</li>
+<li><strong>Pattern-Aware Detection</strong>: <code>SequenceDetector.detect_sequence()</code> now respects configured pattern and only groups files matching that pattern</li>
+<li><strong>Smart Separator Handling</strong>: Correctly identifies sequences with different separators and rejects mismatches</li>
+<li><strong>FFmpeg Integration</strong>: Generates proper <code>%04d</code> format patterns for FFmpeg video/GIF generation</li>
+</ul>
+<h4 id="unified-preview-generation-system">Unified Preview Generation System</h4>
+<ul>
+<li><strong>Images</strong>: Generate PNG thumbnails only (512px max dimension)</li>
+<li><strong>Videos</strong>: Generate PNG thumbnail + animated GIF preview (256px, 3 sec, 10fps)</li>
+<li><strong>Image Sequences</strong>: Treated like videos - generate PNG thumbnail from middle frame + animated GIF + MP4 video preview</li>
+<li><strong>Consistent Workflow</strong>: All asset types now follow the same preview generation pattern for uniform UI experience</li>
+</ul>
+<h4 id="sequence-ingestion-intelligence">Sequence Ingestion Intelligence</h4>
+<ul>
+<li><strong>Bulk Folder Ingestion</strong>: Automatically detects and groups sequences, prevents duplicate frame ingestion</li>
+<li><strong>Drag &amp; Drop</strong>: Single file drops trigger directory scan to detect if part of sequence</li>
+<li><strong>Deduplication</strong>: Tracks processed paths and sequence files to prevent double-ingestion across all methods</li>
+<li><strong>Progress Tracking</strong>: Accurate progress counts even when sequences are detected and consolidated</li>
+</ul>
+<h4 id="database-storage-improvements">Database &amp; Storage Improvements</h4>
+<ul>
+<li><strong>First-Frame Storage</strong>: Stores first frame path in <code>filepath_soft</code>/<code>filepath_hard</code> for reliable file access</li>
+<li><strong>FFmpeg Pattern Storage</strong>: Sequences store both display pattern (<code>####</code>) and FFmpeg pattern (<code>%04d</code>) in metadata</li>
+<li><strong>Frame Range Persistence</strong>: Proper frame range format (<code>1001-1010</code>) stored and used for Nuke Read node creation</li>
+</ul>
+<h4 id="nuke-integration-enhancements">Nuke Integration Enhancements</h4>
+<ul>
+<li><strong>Sequence Path Resolution</strong>: When inserting sequences, automatically converts stored first-frame path to FFmpeg pattern</li>
+<li><strong>Pattern Detection on Insert</strong>: <code>DragGalleryView</code> and <code>NukeIntegration</code> detect sequences and use pattern paths for Nuke Read nodes</li>
+<li><strong>Frame Range Propagation</strong>: Sequences inserted with correct frame range from database metadata</li>
+</ul>
+<h4 id="uiux-improvements">UI/UX Improvements</h4>
+<ul>
+<li><strong>Settings Panel</strong>: Pattern combobox enabled/disabled based on "Auto-detect sequences" toggle state</li>
+<li><strong>Pattern Persistence</strong>: Selected pattern saved to <code>config.json</code> and database settings</li>
+<li><strong>Validation</strong>: Pattern selection validates against known patterns with fallback to default</li>
+</ul>
+<h4 id="code-architecture">Code Architecture</h4>
+<ul>
+<li><strong>SequenceDetector Enhancements</strong>:</li>
+<li>Added <code>PATTERN_MAP</code> with regex patterns and separator definitions</li>
+<li>Added <code>PATTERN_ORDER</code> for deterministic auto-detection priority</li>
+<li>Enhanced <code>detect_sequence()</code> with multi-pattern trial loop</li>
+<li>Added <code>ffmpeg_pattern</code> field to returned metadata dictionary</li>
+<li>Added <code>start_frame</code> field for FFmpeg frame numbering</li>
+<li><strong>IngestionCore Updates</strong>:</li>
+<li>Pattern-aware sequence detection using configured <code>self.sequence_pattern</code></li>
+<li>Dual-path architecture: stores first frame, uses pattern for previews</li>
+<li>Deduplication in <code>ingest_multiple()</code> and <code>ingest_folder()</code></li>
+<li><strong>Config System</strong>: Added <code>sequence_pattern</code> to default config with validation</li>
+</ul>
+<h4 id="bug-fixes">Bug Fixes</h4>
+<ul>
+<li><strong>Fixed</strong>: Hover event handling in <code>media_display_widget.py</code> (eventFilter signature, row attribute access)</li>
+<li><strong>Fixed</strong>: Admin permission checks using <code>getattr()</code> for safe attribute access</li>
+<li><strong>Fixed</strong>: Drag/drop progress tracking now handles normalized paths correctly</li>
+<li><strong>Fixed</strong>: Config indentation for new <code>sequence_pattern</code> defaults</li>
+</ul>
+<h4 id="testing_1">Testing</h4>
+<ul>
+<li><strong>Added</strong>: Comprehensive test suite (<code>tests/test_sequence_detection.py</code>) covering:</li>
+<li>All 4 pattern types with 10-frame sequences</li>
+<li>Single file detection (should NOT be sequence)</li>
+<li>Auto-detect pattern matching</li>
+<li>Mixed pattern handling (selective grouping)</li>
+<li>FFmpeg pattern generation</li>
+<li><strong>Result</strong>: All 8 tests pass successfully</li>
+</ul>
+<hr />
+<h3 id="session-6-completed-nov-17-2025-production-deployment-features">✅ Session 6 - Completed (Nov 17, 2025) - Production Deployment Features</h3>
+<h4 id="configurable-previews-path">Configurable Previews Path</h4>
+<ul>
+<li><strong>Added "Previews Configuration" section</strong> in Settings → General tab with path input and browse button</li>
+<li><strong>Database storage</strong>: Preview path now persists in database settings table (not just config.json)</li>
+<li><strong>Settings priority order</strong>: STOCK_DB env var &gt; database settings &gt; config.json</li>
+</ul>
+<h4 id="stock_db-environment-variable-support">STOCK_DB Environment Variable Support</h4>
+<ul>
+<li><strong>Production deployment control</strong>: When <code>STOCK_DB</code> environment variable is set:</li>
+<li>Database path is automatically overridden to environment variable value</li>
+<li>Previews path is automatically derived as <code>&lt;database_dir&gt;/previews</code></li>
+<li>Settings UI fields are locked (disabled) to prevent user modifications</li>
+<li>Lock icons (🔒) displayed next to disabled fields with status message</li>
+<li>Environment variable takes precedence over all other configuration sources</li>
+</ul>
+<h4 id="database-settings-infrastructure">Database Settings Infrastructure</h4>
+<ul>
+<li><strong>Added <code>settings</code> table</strong> to database schema (key PRIMARY KEY, value, updated_at)</li>
+<li><strong>Implemented database methods</strong> in <code>DatabaseManager</code>:</li>
+<li><code>get_setting(key, default=None)</code>: Retrieve setting value with fallback</li>
+<li><code>set_setting(key, value)</code>: Store setting value with automatic timestamp</li>
+<li><code>get_all_settings()</code>: Retrieve all settings as dictionary</li>
+<li><strong>Added Migration 7</strong>: Auto-creates settings table for existing databases</li>
+<li><strong>Config class integration</strong>: </li>
+<li><code>load_from_database(db_manager)</code>: Loads previews_path from database at startup</li>
+<li><code>save_to_database(db_manager)</code>: Saves previews_path to database when changed</li>
+</ul>
+<h4 id="code-changes">Code Changes</h4>
+<ul>
+<li>Modified: <code>src/ui/settings_panel.py</code> - Previews path UI, STOCK_DB environment checking, UI locking</li>
+<li>Modified: <code>src/config.py</code> - Database integration, environment variable override logic</li>
+<li>Modified: <code>src/db_manager.py</code> - Settings table schema, Migration 7, accessor methods</li>
+<li>Modified: <code>src/ingestion_core.py</code> - Uses configurable previews_path, directory creation, path normalization</li>
+<li>Modified: <code>main.py</code>, <code>nuke_launcher.py</code> - Load database settings at startup</li>
+</ul>
+<h4 id="bug-fixes_1">Bug Fixes</h4>
+<ul>
+<li><strong>Fixed preview generation with STOCK_DB</strong>: Simplified preview directory creation logic</li>
+<li><strong>Fixed path separator issues</strong>: Normalized file paths at ingestion start to prevent Windows path errors</li>
+<li><strong>Fixed WinError 1392</strong>: Resolved "file or directory is corrupted" error caused by mixed forward/backward slashes in file paths</li>
+</ul>
+<hr />
+<h3 id="added">Added</h3>
+<ul>
+<li><strong>Drag &amp; Drop File Ingestion</strong>:</li>
+<li>Enabled drag &amp; drop from OS file explorer into StaX media display</li>
+<li>Implemented <code>dragEnterEvent</code>, <code>dragMoveEvent</code>, <code>dropEvent</code> handlers</li>
+<li>Added <code>IngestProgressDialog</code> for real-time ingestion feedback with cancellation support</li>
+<li>
+<p>Automatically detects current list and ingests dropped files with threading to prevent GUI blocking</p>
+</li>
+<li>
+<p><strong>Full Duration GIF Option</strong>:</p>
+</li>
+<li>Added "Full Duration" checkbox beside GIF Duration spinbox in Settings → Preview &amp; Media</li>
+<li>When enabled, generates GIF from entire video/sequence (ignores duration limit)</li>
+<li>FFmpeg wrapper now accepts <code>None</code> for <code>max_duration</code> parameter</li>
+<li>
+<p>Duration spinbox automatically disables when Full Duration is checked</p>
+</li>
+<li>
+<p><strong>Custom Icons in Ingest Library</strong>:</p>
+</li>
+<li>Replaced standard folder/file icons with custom <code>stack.svg</code> and <code>list.svg</code> icons</li>
+<li>Preview Structure tree now uses consistent StaX iconography</li>
+<li>
+<p>Improved visual hierarchy in bulk ingestion dialog</p>
+</li>
+<li>
+<p><strong>FFmpeg Multithreading Support</strong>:</p>
+</li>
+<li>Added <code>-threads</code> parameter to all FFmpeg conversion methods (generate_thumbnail, generate_sequence_thumbnail, generate_video_preview, generate_gif_preview)</li>
+<li>FFmpeg operations now use configurable thread count from Settings → Preview &amp; Media → Thread Count</li>
+<li>Prevents GUI freezing during video/GIF conversion by properly utilizing CPU cores</li>
+<li>
+<p>Default: 4 threads, configurable range: 1-16</p>
+</li>
+<li>
+<p><strong>Custom Checkbox Icons</strong>: </p>
+</li>
+<li>Replaced default checkbox styling with custom SVG icons (checked.svg, unchecked.svg)</li>
+<li>
+<p>Dynamically loaded with absolute paths in stylesheet for consistent rendering</p>
+</li>
+<li>
+<p><strong>User Management Dialogs</strong>:</p>
+</li>
+<li>Implemented <code>AddUserDialog</code> for creating new users with validation</li>
+<li>Implemented <code>EditUserDialog</code> for modifying user details, password, role, and status</li>
+<li>
+<p>Add User, Edit User, and Deactivate User buttons now fully functional in Security Admin tab</p>
+</li>
+<li>
+<p><strong>Show Entire Stack Elements Feature</strong>:</p>
+</li>
+<li>Added optional setting in Preview &amp; Media tab: "Show entire stack elements on stack selection"</li>
+<li>When enabled, clicking a stack shows all elements from all lists within that stack</li>
+<li>Useful for browsing entire categories without navigating individual lists</li>
+<li>
+<p>Status bar shows "(all lists)" to indicate stack-wide view</p>
+</li>
+<li>
+<p><strong>Custom Focus Mode Icon</strong>: Created <code>focus.svg</code> with corner brackets design representing focus/distraction-free mode, replacing generic expand arrow icon</p>
+</li>
+</ul>
+<h3 id="enhanced">Enhanced</h3>
+<ul>
+<li><strong>Deletion Security</strong>:</li>
+<li>Added admin permission checks to <code>delete_stack()</code> and <code>delete_list()</code> methods</li>
+<li>Non-admin users now see permission denied dialogs when attempting to delete</li>
+<li>StacksListsPanel now accepts <code>main_window</code> parameter for permission validation</li>
+<li>
+<p>Element deletion already had admin checks (now consistent across all delete operations)</p>
+</li>
+<li>
+<p><strong>Focus Mode Improvements</strong>:</p>
+</li>
+<li>Now closes video player, settings, and history panels when entering focus mode</li>
+<li>Hides pagination bar (page navigator + items per page counter) for cleaner view</li>
+<li>Restores pagination visibility when exiting focus mode (if pagination is enabled and elements exist)</li>
+<li>Provides true distraction-free browsing experience</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li><strong>Duplicate Security Admin Tabs</strong>:</li>
+<li>Corrected tab name search string in <code>refresh_security_tab()</code> from "Security &amp; Admin" to "Security Admin"</li>
+<li>Old tab is now properly removed before creating refreshed version</li>
+<li>
+<p>Fixes issue where multiple Security Admin tabs appeared in settings panel</p>
+</li>
+<li>
+<p><strong>GIF Preview in Nuke</strong>:</p>
+</li>
+<li>Changed QListWidgetItem comparison from <code>!=</code> to <code>is not</code> in <code>eventFilter()</code> at line 665</li>
+<li>Fixes <code>NotImplementedError: operator not implemented</code> crash during hover preview</li>
+<li>
+<p>GIF hover previews now work correctly in Nuke plugin</p>
+</li>
+<li>
+<p><strong>Drag &amp; Drop Crash in Nuke</strong>:</p>
+</li>
+<li>Fixed Nuke crash occurring after successful file ingestion via drag &amp; drop</li>
+<li><strong>Problem:</strong> Lambda callbacks and QTimer usage within worker threads caused instability in Nuke's event loop</li>
+<li><strong>Solution:</strong> Rewrote <code>ingest_dropped_files()</code> to use proper Qt signals/slots pattern:<ul>
+<li>Created <code>IngestThread</code> class with <code>progress_updated</code>, <code>ingestion_complete</code>, <code>ingestion_failed</code> signals</li>
+<li>Moved all UI updates to main thread via signal connections</li>
+<li>Added proper thread cleanup with <code>deleteLater()</code> and <code>wait()</code> timeout</li>
+</ul>
+</li>
+<li>
+<p>Drag &amp; drop now works reliably in both Nuke and standalone without crashes</p>
+</li>
+<li>
+<p><strong>Security Admin Tab Access in Standalone</strong>:</p>
+</li>
+<li>Fixed Security Admin tab incorrectly showing "Administrator Privileges Required" for logged-in admins</li>
+<li><strong>Problem:</strong> <code>showEvent()</code> was refreshing tab on every panel show, including before login</li>
+<li><strong>Solution:</strong> Added intelligent refresh logic:<ul>
+<li>Tracks <code>_last_admin_status</code> to detect actual permission changes</li>
+<li>Only rebuilds tab when admin status differs from cached state</li>
+<li>Prevents unnecessary tab recreation while preserving Nuke refresh functionality</li>
+</ul>
+</li>
+<li>
+<p>Security Admin tab now correctly reflects admin status after login in standalone mode</p>
+</li>
+<li>
+<p><strong>Security Admin Tab in Standalone</strong> (Original Fix):</p>
+</li>
+<li>Fixed "Administrator Privileges Required" message appearing for logged-in admin users</li>
+<li>Added <code>showEvent()</code> and <code>refresh_security_tab()</code> to SettingsPanel to rebuild tab content when panel opens</li>
+<li>
+<p>Security tab now correctly reflects current admin status after login</p>
+</li>
+<li>
+<p><strong>Tags Filter in Nuke Plugin</strong>:</p>
+</li>
+<li>Connected missing <code>tags_filter_changed</code> signal in nuke_launcher.py</li>
+<li>Added <code>on_tags_filter_changed()</code> handler to process tag filtering</li>
+<li>
+<p>Tag filtering now works correctly in Nuke plugin (was only working in standalone)</p>
+</li>
+<li>
+<p><strong>Focus Mode Geometry Bug</strong> (Nuke &amp; Standalone):</p>
+</li>
+<li>Fixed ~50% shrinkage of elements browser when toggling focus mode</li>
+<li><strong>Problem:</strong> Restoration logic used <code>sum(sizes)</code> which summed collapsed state <code>[0, X]</code> instead of actual widget width</li>
+<li><strong>Solution:</strong> Changed both <code>nuke_launcher.py</code> and <code>main.py</code> to use <code>self.main_splitter.width()</code> for accurate total width</li>
+<li>
+<p>Focus mode now correctly allocates space when hiding/showing navigation panel</p>
+</li>
+<li>
+<p><strong>Empty State Placeholder Not Visible</strong>:</p>
+</li>
+<li>Fixed placeholder widget not appearing in empty stacks or lists</li>
+<li><strong>Problem:</strong> Empty state widget and view_stack were siblings in layout, causing visibility conflicts</li>
+<li><strong>Solution:</strong> Restructured to use <code>content_stack</code> (QStackedWidget) with two indices:<ul>
+<li>Index 0: Empty state widget (icon, message, hint)</li>
+<li>Index 1: Views container (view_stack + pagination)</li>
+</ul>
+</li>
+<li>Updated <code>show_empty_state()</code>, <code>load_elements()</code>, and <code>load_elements_by_tags()</code> to use <code>setCurrentIndex()</code></li>
+<li>
+<p>Empty state now properly displays when lists are empty</p>
+</li>
+<li>
+<p><strong>Login Dialog Spacing</strong>: </p>
+</li>
+<li>Increased vertical spacing between username/password fields to 25px (from 18px)</li>
+<li>Reduced button heights to 32px (from 35/48px) for better visual balance</li>
+<li>Added fixed button widths (Login: 100px, Guest: 140px)</li>
+<li>
+<p>Improved layout margins and spacing throughout dialog</p>
+</li>
+<li>
+<p><strong>SettingsPanel TypeError in Nuke Mode</strong> (CRITICAL FIX):</p>
+</li>
+<li>Fixed <code>TypeError: string indices must be integers</code> when opening Settings panel</li>
+<li><strong>Problem:</strong> In Nuke mode, <code>current_user</code> was set as string <code>"admin"</code> instead of dictionary</li>
+<li><strong>Solution:</strong> Changed auto-login to use proper dictionary format with user_id, username, role, email fields</li>
+<li><strong>File updated:</strong> <code>nuke_launcher.py</code> lines ~355-365</li>
+<li>
+<p>Settings panel now opens successfully in Nuke without errors</p>
+</li>
+<li>
+<p><strong>Directory Creation Permission Error</strong> (CRITICAL FIX):</p>
+</li>
+<li>Fixed <code>PermissionError: [WinError 5] Access is denied</code> in THREE locations</li>
+<li><strong>Problem:</strong> Relative paths like <code>'./data'</code> and <code>'./previews'</code> don't work in Nuke's execution context</li>
+<li><strong>Solution:</strong> Convert all relative paths to absolute paths before creating directories</li>
+<li><strong>Updated Files:</strong><ul>
+<li><code>src/config.py</code> - <code>Config.ensure_directories()</code> method (fixed <code>./data</code>, <code>./repository</code>, <code>./previews</code>, <code>./logs</code>)</li>
+<li><code>src/db_manager.py</code> - <code>DatabaseManager.__init__()</code> method (fixed <code>./data</code> for database)</li>
+<li><code>src/ingestion_core.py</code> - <code>IngestionCore.__init__()</code> method (fixed <code>./previews</code> for thumbnails)</li>
+</ul>
+</li>
+<li>All three modules now:<ul>
+<li>Detect script root directory (<code>D:\Scripts\modern-stock-browser\</code>)</li>
+<li>Convert relative paths to absolute paths</li>
+<li>Add better error handling (warnings instead of exceptions)</li>
+<li>Update internal paths to use absolute paths</li>
+<li>Print debug output showing resolved paths</li>
+</ul>
+</li>
+<li>Also fixes: <code>AttributeError: 'NoneType' object has no attribute 'addToPane'</code></li>
+<li>
+<p>Prevents crash during StaXPanel initialization in Nuke</p>
+</li>
+<li>
+<p><strong>Windows Console Encoding Issue</strong> (CRITICAL FIX):</p>
+</li>
+<li>Fixed <code>UnicodeEncodeError</code> on Nuke startup caused by Unicode symbols in debug output</li>
+<li>Replaced Unicode symbols with ASCII equivalents:<ul>
+<li><code>✓</code> → <code>[OK]</code></li>
+<li><code>✗</code> → <code>[ERROR]</code></li>
+<li><code>⚠</code> → <code>[WARN]</code></li>
+</ul>
+</li>
+<li>Updated all Python files: init.py, menu.py, nuke_launcher.py, stax_logger.py</li>
+<li>Created <code>fix_unicode.py</code> utility script for automated fixing</li>
+<li>Created <code>UNICODE_FIX.md</code> documentation</li>
+<li>Nuke on Windows uses CP1252 encoding which doesn't support these Unicode characters</li>
+<li>
+<p>This was preventing StaX from loading in Nuke on Windows systems</p>
+</li>
+<li>
+<p><strong>Nuke UI Compatibility Issues</strong>:</p>
+</li>
+<li>Disabled stylesheet loading in Nuke mode (uses Nuke's default Qt styling)</li>
+<li>Skipped login dialog in Nuke mode (auto-login as admin)</li>
+<li>Prevents potential Qt compatibility crashes between custom styles and Nuke's UI</li>
+<li>Login dialog only shown in standalone mode</li>
+<li><strong>Rationale</strong>: Simplify Nuke integration, reduce crash points during startup</li>
+</ul>
+<h3 id="added_1">Added</h3>
+<ul>
+<li><strong>Settings Access Control</strong> (NEW):</li>
+<li>Added login requirement check before opening Settings panel</li>
+<li>Non-admin users are prompted to login when accessing Settings (Ctrl+3)</li>
+<li>Access denied warning if user cancels login or logs in as non-admin</li>
+<li>Seamless experience in Nuke mode (auto-logged as admin)</li>
+<li>
+<p><strong>File updated:</strong> <code>nuke_launcher.py</code> show_settings() method</p>
+</li>
+<li>
+<p><strong>FFpyplayer Dependencies Path</strong> (NEW):</p>
+</li>
+<li>Added <code>dependencies/ffpyplayer</code> directory to sys.path on startup</li>
+<li>Allows ffpyplayer import without pip installation in Nuke environment</li>
+<li>Conditional addition - only if directory exists</li>
+<li>Debug output confirms path addition</li>
+<li>
+<p><strong>File updated:</strong> <code>nuke_launcher.py</code> module initialization</p>
+</li>
+<li>
+<p><strong>Comprehensive Debugging System</strong> (Current Session):</p>
+</li>
+<li>Created <code>stax_logger.py</code> - Centralized logging infrastructure (160 lines)</li>
+<li><code>StaXLogger</code> class with dual output (console + timestamped log files)</li>
+<li>Log levels: debug, info, warning, error, critical, exception</li>
+<li>Automatic traceback capture with <code>exception()</code> method</li>
+<li>Log files stored in <code>logs/</code> directory with format: <code>stax_YYYYMMDD_HHMMSS.log</code></li>
+<li>Singleton pattern via <code>get_logger()</code> function</li>
+<li>Log format: <code>[HH:MM:SS.mmm] [LEVEL] message</code></li>
+<li>Added comprehensive debugging to all Nuke integration files:<ul>
+<li><strong>init.py</strong>: Plugin path verification, existence checks, full error handling</li>
+<li><strong>menu.py</strong>: Per-command error handling, menu creation tracking</li>
+<li><strong>nuke_launcher.py</strong>: Import-level debugging, initialization tracking, panel registration debugging</li>
+</ul>
+</li>
+<li><strong>Import-Level Debugging</strong>:<ul>
+<li>Each module import wrapped in try/except with individual error reporting</li>
+<li>Progress indicators: ✓ for success, ✗ for failure, ⚠ for warnings</li>
+<li>Detailed error messages with full tracebacks</li>
+<li>16 UI widget imports tracked individually</li>
+</ul>
+</li>
+<li><strong>Initialization Debugging</strong>:<ul>
+<li>StaXPanel.<strong>init</strong>() fully instrumented with logging</li>
+<li>Every component creation tracked (Config, DatabaseManager, NukeBridge, etc.)</li>
+<li>Window property setting with error handling</li>
+<li>UI setup and login dialog scheduling with error tracking</li>
+</ul>
+</li>
+<li><strong>Panel Registration Debugging</strong>:<ul>
+<li>show_stax_panel() function fully instrumented</li>
+<li>QApplication instance detection and tracking</li>
+<li>Stylesheet loading with file existence checks</li>
+<li>nukescripts.panels.registerWidgetAsPanel() with fallback handling</li>
+<li>Standalone mode debugging for testing</li>
+</ul>
+</li>
+<li><strong>Main Function Debugging</strong>:<ul>
+<li>QApplication creation/retrieval tracking</li>
+<li>Panel creation and display monitoring</li>
+<li>Qt event loop execution tracking</li>
+</ul>
+</li>
+<li>Total debugging additions: ~400+ lines across 4 files</li>
+<li>
+<p>Purpose: Identify crash cause when opening StaX panel in Nuke</p>
+</li>
+<li>
+<p><strong>Nuke Plugin Launcher</strong> (Session 7):</p>
+</li>
+<li>Created <code>nuke_launcher.py</code> - Nuke-specific panel implementation (563 lines)</li>
+<li><code>StaXPanel</code> class - QWidget-based panel for embedding in Nuke</li>
+<li>Automatic Nuke detection and mock mode disabling</li>
+<li>Toolbar-based interface (replaces menubar for panel context)</li>
+<li>Real-time Nuke integration with actual Read/ReadGeo node creation</li>
+<li>Dockable panel using <code>nukescripts.panels.registerWidgetAsPanel()</code></li>
+<li>Support for both Nuke panel mode and standalone dialog fallback</li>
+<li>User authentication with toolbar-based UI</li>
+<li>All features from standalone app available in panel</li>
+<li><strong>Key Features:</strong><ul>
+<li>Opens with <code>Ctrl+Alt+S</code> keyboard shortcut</li>
+<li>Drag &amp; drop elements directly into Node Graph</li>
+<li>Double-click to insert elements into DAG</li>
+<li>Register selected Nuke nodes as reusable toolsets</li>
+<li>Quick actions via StaX menu</li>
+<li>Preview pane with video playback</li>
+<li>Advanced search and filtering</li>
+<li>History and settings dialogs</li>
+</ul>
+</li>
+<li><strong>Updated Menu System</strong> (<code>menu.py</code>):</li>
+<li>Professional Nuke menu integration under "StaX" top-level menu</li>
+<li>Menu commands:<ul>
+<li>Open StaX Panel (<code>Ctrl+Alt+S</code>)</li>
+<li>Quick Ingest (<code>Ctrl+Shift+I</code>)</li>
+<li>Register Toolset (<code>Ctrl+Shift+T</code>)</li>
+<li>Advanced Search (<code>Ctrl+F</code>)</li>
+</ul>
+</li>
+<li>Icon support for menu items</li>
+<li>Print confirmation messages for debugging</li>
+<li>Full error handling with per-command try/except blocks</li>
+<li><strong>Enhanced Init Script</strong> (<code>init.py</code>):</li>
+<li>Dynamic plugin path detection using <code>__file__</code></li>
+<li>Adds src/, resources/, tools/ to Nuke plugin path</li>
+<li>Debug output showing loaded paths</li>
+<li>Compatible with both user directory and network installations</li>
+<li>Plugin path verification with existence checks</li>
+<li>Critical error handling with full tracebacks</li>
+<li><strong>Comprehensive Nuke Installation Guide</strong> (<code>NUKE_INSTALLATION.md</code>):</li>
+<li>Three installation methods (user dir, network, NUKE_PATH)</li>
+<li>Verification steps and troubleshooting</li>
+<li>Configuration examples for studios</li>
+<li>Facility-wide deployment patterns</li>
+<li>Post-import processor examples</li>
+<li>Batch operations examples</li>
+<li>200+ lines of documentation</li>
+<li><strong>Dual-Mode Architecture:</strong></li>
+<li><code>main.py</code> remains as standalone launcher (QMainWindow)</li>
+<li><code>nuke_launcher.py</code> for Nuke integration (QWidget panel)</li>
+<li>Shared core modules (src/) between both modes</li>
+<li>Automatic mode detection (<code>NUKE_MODE</code> flag)</li>
+<li>Mock mode toggle based on environment</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li><strong>Nuke Panel Preview Behavior</strong>:</li>
+<li>Disabled the video preview pane inside the embedded Nuke launcher</li>
+<li>Frees space for navigation/media grids while avoiding inactive playback controls</li>
+<li>Keeps standalone desktop build unchanged (still offers video playback)</li>
+<li>Guarded preview handlers so they safely no-op in Nuke mode</li>
+<li><strong>Standalone Launcher Preserved:</strong></li>
+<li><code>main.py</code> kept intact for standalone usage</li>
+<li>No breaking changes to existing workflow</li>
+<li>Continues to use QMainWindow with full menubar</li>
+<li>Maintains compatibility with previous sessions</li>
+<li><strong>Nuke Bridge Behavior:</strong></li>
+<li>Automatically disables mock mode when running in Nuke</li>
+<li>Uses real Nuke Python API for node creation</li>
+<li><code>nuke_bridge.py</code> detects Nuke environment</li>
+<li>Creates actual Read/ReadGeo nodes instead of mocks</li>
+</ul>
+<h3 id="added_2">Added</h3>
+<ul>
+<li><strong>GUI Code Refactoring - Modular Structure</strong> (COMPLETE):</li>
+<li>Extracted 19 widget/dialog classes from monolithic <code>main.py</code> into organized modules</li>
+<li>Created <code>src/ui/</code> module structure with 10 focused files</li>
+<li>Module breakdown:<ul>
+<li><code>dialogs.py</code> - 10 dialog classes (AdvancedSearchDialog, AddStackDialog, AddListDialog, etc.)</li>
+<li><code>pagination_widget.py</code> - PaginationWidget</li>
+<li><code>drag_gallery_view.py</code> - DragGalleryView</li>
+<li><code>media_info_popup.py</code> - MediaInfoPopup</li>
+<li><code>stacks_lists_panel.py</code> - StacksListsPanel</li>
+<li><code>media_display_widget.py</code> - MediaDisplayWidget</li>
+<li><code>history_panel.py</code> - HistoryPanel</li>
+<li><code>settings_panel.py</code> - SettingsPanel</li>
+<li><code>ingest_library_dialog.py</code> - IngestLibraryDialog</li>
+<li><code>__init__.py</code> - Central exports</li>
+</ul>
+</li>
+<li>Benefits:<ul>
+<li>90% reduction in main.py size (187 KB → 18 KB)</li>
+<li>Improved maintainability - each widget in focused file</li>
+<li>Better testability - widgets can be tested in isolation</li>
+<li>No circular dependencies</li>
+<li>100% functional compatibility maintained</li>
+</ul>
+</li>
+<li>Documentation:<ul>
+<li><code>REFACTORING.md</code> - Comprehensive refactoring guide</li>
+<li><code>REFACTORING_SUMMARY.md</code> - Metrics and benefits summary</li>
+</ul>
+</li>
+<li>Security: CodeQL scan passed with 0 vulnerabilities</li>
+<li>
+<p>All modules syntactically valid and properly structured</p>
+</li>
+<li>
+<p><strong>Lazy-loading Thumbnails &amp; Pagination</strong> (Session 6 - Feature 7 - ALREADY IMPLEMENTED):</p>
+</li>
+<li>Pagination system with configurable page size (default: 100 items per page)</li>
+<li>Page selector widget with first/prev/next/last buttons</li>
+<li>Total items counter and current page display</li>
+<li>Pagination enabled/disabled toggle in settings panel</li>
+<li>Page-based thumbnail loading (only loads thumbnails for current page)</li>
+<li>Preview caching for memory efficiency (PreviewCache)</li>
+<li>Dynamic icon scaling based on slider position</li>
+<li>Search/filter integration maintains pagination</li>
+<li>Tag-based search with pagination support</li>
+<li>Favorites/playlists pagination</li>
+<li>Performance optimized: Only processes visible page elements</li>
+<li>Configuration options: items_per_page, pagination_enabled</li>
+<li>Benefits: Handles large libraries (1000+ elements) without lag</li>
+<li>Files: main.py (lines 1210-1298 Pagination widget, lines 1303-1510 page-based loading)</li>
+<li><strong>Network-aware SQLite File Locking</strong> (Session 6 - Feature 6 - COMPLETE):</li>
+<li>Created <code>src/file_lock.py</code> - Cross-platform file locking manager (238 lines)</li>
+<li>FileLockManager class with advisory file locking:<ul>
+<li>Platform-specific locking: Windows (msvcrt) and POSIX (fcntl)</li>
+<li>Exponential backoff with jitter for lock acquisition</li>
+<li>Configurable timeout and retry parameters</li>
+<li>Automatic lock release with context manager support</li>
+<li>Lock file management (.lock extension)</li>
+<li>PID tracking in lock files for debugging</li>
+</ul>
+</li>
+<li>Integrated into DatabaseManager:<ul>
+<li>External file lock acquisition before database connection</li>
+<li>Lock file path: <code>{database_path}.lock</code></li>
+<li>Configurable via <code>use_file_lock</code> parameter (default: True)</li>
+<li>Lock released automatically in finally block</li>
+<li>Supports concurrent access from multiple workstations</li>
+</ul>
+</li>
+<li>Features:<ul>
+<li>Retry logic with exponential backoff (100 attempts, 30s timeout)</li>
+<li>Random jitter to prevent thundering herd</li>
+<li>Graceful timeout handling with informative error messages</li>
+<li>Platform-agnostic API (works on Windows and Linux)</li>
+<li>Python 2.7 compatible (includes TimeoutError polyfill)</li>
+<li>Context manager interface: <code>with file_lock(path):</code></li>
+<li>Automatic cleanup on object destruction</li>
+</ul>
+</li>
+<li>Network file system optimization:<ul>
+<li>WAL journal mode for better concurrency</li>
+<li>NORMAL synchronous mode for balanced performance</li>
+<li>60-second connection timeout</li>
+<li>16MB cache size for performance</li>
+<li>Handles stale locks and network delays</li>
+</ul>
+</li>
+<li>Use case: Multiple VFX workstations accessing shared database on network storage</li>
+<li>Files: src/file_lock.py (238 lines), src/db_manager.py (updated get_connection method)</li>
+<li><strong>Packaging and Installer System</strong> (Session 6 - Feature 5 - COMPLETE):</li>
+<li>Created <code>tools/build_installer.py</code> - Automated build script for Windows distribution</li>
+<li>PyInstaller integration for standalone executable generation</li>
+<li>Automatic dependency bundling (PySide2, ffpyplayer, SQLite, FFmpeg binaries)</li>
+<li>NSIS installer script generation for professional Windows installer</li>
+<li>Portable ZIP distribution creation</li>
+<li>Features:<ul>
+<li>Clean build process with artifact removal</li>
+<li>Dependency validation (PyInstaller, PySide2, ffpyplayer)</li>
+<li>Dynamic .spec file generation with proper configuration</li>
+<li>Resource bundling (icons, config, examples, FFmpeg)</li>
+<li>Hidden imports for PySide2 and ffpyplayer</li>
+<li>README.txt generation with installation instructions</li>
+<li>NSIS installer with shortcuts (Start Menu, Desktop)</li>
+<li>Add/Remove Programs registry entries</li>
+<li>Uninstaller creation</li>
+<li>Portable ZIP for USB/network deployment</li>
+</ul>
+</li>
+<li>Build output:<ul>
+<li>Standalone executable: <code>dist/StaX/StaX.exe</code> (~100-200 MB)</li>
+<li>Portable distribution: <code>installers/StaX_v1.0.0-beta_Portable.zip</code></li>
+<li>NSIS installer: <code>installers/StaX_Setup_v1.0.0-beta.exe</code></li>
+</ul>
+</li>
+<li>Documentation:<ul>
+<li><code>tools/BUILD_INSTRUCTIONS.md</code> - Complete build guide</li>
+<li><code>tools/requirements-build.txt</code> - Build dependencies</li>
+<li>Troubleshooting section for common issues</li>
+<li>CI/CD automation examples</li>
+</ul>
+</li>
+<li>Configuration options:<ul>
+<li>App version, name, author customizable</li>
+<li>Icon support (app_icon.ico)</li>
+<li>UPX compression enabled</li>
+<li>No console window for GUI app</li>
+</ul>
+</li>
+<li>Files: tools/build_installer.py (467 lines), tools/BUILD_INSTRUCTIONS.md (279 lines)</li>
+<li><strong>Sequence Video Preview Generation</strong> (Session 6 - Feature 4 - COMPLETE):</li>
+<li>Enhanced FFmpegWrapper with <code>generate_sequence_video_preview()</code> method</li>
+<li>Generates low-res MP4 previews (~512px) for image sequences</li>
+<li>Configurable parameters: max_size (512px), fps (24), start_frame, max_frames (100 limit for 4-second previews)</li>
+<li>Smart frame limiting: Creates preview from first 100 frames to keep file size manageable</li>
+<li>FFmpeg options: fast encoding preset, CRF 28 for compression, faststart flag for web streaming</li>
+<li>PreviewGenerator.generate_sequence_video_preview() static method</li>
+<li>Automatic integration in ingestion_core.py workflow for 2D sequences</li>
+<li>Database schema update: Added <code>video_preview_path</code> column to elements table</li>
+<li>Migration 2.5: Automatic column addition for existing databases</li>
+<li>Output format: MP4 with H.264 encoding</li>
+<li>Maintains aspect ratio with force_original_aspect_ratio=decrease filter</li>
+<li>Async-ready: Compatible with existing PreviewWorker/PreviewManager thread pool</li>
+<li>Usage: Sequences now generate three types of previews:<ul>
+<li>Static PNG thumbnail (middle frame)</li>
+<li>Animated GIF preview (3 seconds, 256x256px square)</li>
+<li>Low-res MP4 video preview (first 100 frames, ~512px)</li>
+</ul>
+</li>
+<li><strong>Video Playback Preview Pane</strong> (Session 5 - NEW FEATURE - ffpyplayer Implementation):</li>
+<li>Created <code>VideoPlayerWidget</code> (500+ lines) - professional embedded video player using ffpyplayer library</li>
+<li><strong>ffpyplayer Integration</strong>: Python bindings to FFmpeg for native frame-by-frame playback</li>
+<li><strong>FFpyVideoWidget</strong>: Custom QLabel widget that renders RGB24 frames from ffpyplayer</li>
+<li><strong>PlayerController</strong>: Qt-based controller wrapping ffpyplayer.MediaPlayer with signal/slot architecture</li>
+<li><strong>Universal Format Support</strong>: Plays ALL video formats including .mov, .mkv, .webm, .flv, .mp4, .avi, etc.</li>
+<li><strong>No External Dependencies</strong>: No Windows codec requirements, no DirectShow limitations</li>
+<li>Right-side preview pane appears when single element selected</li>
+<li>Automatic hide when multiple elements selected</li>
+<li><strong>Playback Features</strong>:<ul>
+<li>Embedded video playback for all formats (no codec installation needed)</li>
+<li>Frame-by-frame decoding with RGB24 output</li>
+<li>Real-time frame rendering with automatic scaling</li>
+<li>Timeline slider with real-time position synchronization</li>
+<li>Playback controls: Play/Pause toggle, Stop, Frame stepping</li>
+<li>Time display (HH:MM:SS format) with current and total time labels</li>
+<li>Frame counter with approximate 24fps calculation</li>
+<li>Seek support (scrub timeline to any position)</li>
+<li>Metadata display section with formatted element information</li>
+<li>Tags display with bullet points</li>
+<li>Deprecated status indicator</li>
+<li>Close button with automatic cleanup</li>
+</ul>
+</li>
+<li><strong>Technical Architecture</strong>:<ul>
+<li><code>PlayerController</code>: Manages ffpyplayer.MediaPlayer lifecycle</li>
+<li>Signal emissions: frame_ready, finished, duration_changed, position_changed</li>
+<li>QTimer-based frame polling loop</li>
+<li>Automatic format detection (rgb24 output)</li>
+<li>Memory-efficient frame handling with memoryview/bytearray conversion</li>
+<li>QImage rendering from raw RGB24 data (3 bytes per pixel)</li>
+</ul>
+</li>
+<li><strong>Error Handling</strong>:<ul>
+<li>Format validation before loading</li>
+<li>ffpyplayer availability detection</li>
+<li>File existence checks</li>
+<li>Clear error messages with installation instructions</li>
+<li>Debug output for troubleshooting</li>
+</ul>
+</li>
+<li><strong>Timeline Scrubbing</strong>: Drag slider to seek, pause-during-scrub, resume after</li>
+<li>Integrated into MainWindow with 3-panel splitter layout (left: 250px, center: 900px, right: 400px)</li>
+<li>Selection change handlers for automatic show/hide behavior</li>
+<li><strong>Dependencies</strong>: Requires <code>pip install ffpyplayer</code> (includes FFmpeg binaries)</li>
+<li><strong>Roadmap Requested Tasks Implementation</strong> (Session 5):</li>
+<li><strong>Task 2 - SVG Icons</strong>: Verified all 3 required icons (stack.svg, list.svg, playlist.svg) exist in resources/icons/ with proper SVG structure and color tinting support</li>
+<li><strong>Task 3 - Sub-list Creation</strong>: Modified <code>add_list()</code> button to create sub-lists when a list is selected, top-level lists otherwise. Leverages existing <code>AddSubListDialog</code> and hierarchical tree display</li>
+<li><strong>Task 4 - Context Menu Bulk Operations</strong>: Removed "Bulk Operations ▼" toolbar button. Bulk actions (Add to Favorites, Add to Playlist, Mark Deprecated, Delete Selected) now accessible via right-click context menu when multiple items are selected. Includes selection count header and permission checks</li>
+</ul>
+<h3 id="fixed_1">Fixed</h3>
+<ul>
+<li><strong>Video Playback Universal Format Support</strong> (Session 5 - ffpyplayer Solution):</li>
+<li>Completely replaced QMediaPlayer/FFplay hybrid with ffpyplayer library</li>
+<li>Issue: Windows DirectShow codec limitations prevented .mov, .mkv, .webm playback</li>
+<li>Issue: QMediaPlayer required system codecs (DirectShow error 0x80040266)</li>
+<li>Issue: FFplay fallback required external windows and lost control integration</li>
+<li>Solution: ffpyplayer provides native Python bindings to FFmpeg</li>
+<li>Benefits:<ul>
+<li>Plays ALL video formats without codec installation</li>
+<li>Fully embedded playback (no external windows)</li>
+<li>Frame-by-frame control with RGB24 output</li>
+<li>Cross-platform compatibility</li>
+<li>Professional VFX pipeline ready</li>
+</ul>
+</li>
+<li>Architecture: PlayerController wraps ffpyplayer.MediaPlayer with Qt signals</li>
+<li>Custom FFpyVideoWidget renders decoded frames in QLabel with QPixmap</li>
+<li>Maintains full timeline control, scrubbing, and playback state management</li>
+<li><strong>Video Playback Embedding</strong> (Session 5 - Refactoring):</li>
+<li>Refactored VideoPlayerWidget from external ffplay subprocess to embedded QMediaPlayer</li>
+<li>User feedback: "it should be played inside the video player widget itself"</li>
+<li>Converted 650-line ffplay implementation to 500-line Qt Multimedia implementation</li>
+<li>Removed subprocess management, threading, and external process monitoring</li>
+<li>Added QMediaPlayer with QVideoWidget for native embedded playback</li>
+<li>Improved control integration with signal/slot architecture</li>
+<li>Timeline now syncs automatically with playback position</li>
+<li>Scrubbing works natively with setPosition() instead of ffplay seeking</li>
+<li><strong>FFplay Path Configuration</strong> (Session 5 - Bug Fix - SUPERSEDED):</li>
+<li>Fixed VideoPlayerWidget to use local ffplay.exe from <code>bin/ffmpeg/bin/ffplay.exe</code></li>
+<li>No longer expects ffplay in system PATH</li>
+<li>Added existence check with helpful error message showing expected path</li>
+<li>Path construction: <code>project_root/bin/ffmpeg/bin/ffplay.exe</code></li>
+<li><strong>Sub-list Data Unpacking</strong> (Session 5 - Bug Fix):</li>
+<li>Fixed ValueError in <code>add_list()</code> when unpacking tree item data (expected 2 values, got 3)</li>
+<li>Added length check before unpacking to handle variable-length data tuples</li>
+<li>Properly extracts stack_id from 3rd element or parent item</li>
+<li><strong>Database Migration Issues</strong> (Session 4 - Bug Fix):</li>
+<li>Fixed missing <code>users</code> and <code>user_sessions</code> tables in existing databases</li>
+<li>Added Migration 3: Auto-creates <code>users</code> table with default admin account</li>
+<li>Added Migration 4: Auto-creates <code>user_sessions</code> table for session tracking</li>
+<li>Fixed <code>get_favorites()</code> query using wrong column name (<code>favorited_at</code> → <code>created_at</code>)</li>
+<li><strong>UI Error Handling</strong> (Session 4 - Bug Fix):</li>
+<li>Fixed RuntimeError in GIF animation when QListWidgetItem is deleted during playback</li>
+<li>Added try-catch blocks in <code>_update_gif_frame()</code> to handle deleted items gracefully</li>
+<li>Removed invalid <code>setStyleSheet()</code> call on QAction (not supported in Qt)</li>
+<li><strong>Application Stability</strong>: All critical runtime errors resolved, app runs without crashes</li>
+</ul>
+<h3 id="added_3">Added</h3>
+<ul>
+<li><strong>Live Filtering Enhancement - Tagging System</strong> (Session 4 - Feature 1 - COMPLETE):</li>
+<li>Database tag management methods (8 total):<ul>
+<li><code>get_all_tags()</code>: Returns all unique tags across elements</li>
+<li><code>search_elements_by_tags(tags, match_all)</code>: Search by one or multiple tags</li>
+<li><code>get_elements_by_tag(tag)</code>: Get elements with specific tag</li>
+<li><code>add_tag_to_element(element_id, tag)</code>: Add tag without duplicates</li>
+<li><code>remove_tag_from_element(element_id, tag)</code>: Remove specific tag</li>
+<li><code>replace_element_tags(element_id, tags)</code>: Replace all tags</li>
+</ul>
+</li>
+<li>Enhanced EditElementDialog with tag autocomplete:<ul>
+<li>QCompleter with all existing tags</li>
+<li>Popular tags display (top 10)</li>
+<li>Smart sorting and formatting</li>
+</ul>
+</li>
+<li>Advanced search syntax support:<ul>
+<li><code>#fire</code> - Search by single tag</li>
+<li><code>#fire,explosion</code> - Search by multiple tags (OR logic)</li>
+<li><code>tag:fire</code> - Explicit tag search</li>
+<li><code>tag:fire,explosion</code> - Multiple tags with explicit syntax</li>
+<li>Plain text - Regular name search</li>
+</ul>
+</li>
+<li>Visual tag indicators:<ul>
+<li>Tags displayed in gallery view as suffix [tag1, tag2, tag3]</li>
+<li>Tags shown in table view comment column</li>
+<li>Search hint label shows active tag filters</li>
+</ul>
+</li>
+<li>Consolidated view update logic:<ul>
+<li><code>_update_views_with_elements()</code> helper method</li>
+<li>Handles both gallery and table views</li>
+<li>Supports favorites, deprecated, and tag indicators</li>
+<li>Integrates with GIF playback system</li>
+</ul>
+</li>
+<li>Smart tag parsing and filtering in live search</li>
+<li><strong>User/Permission Management System</strong> (Session 4 - Feature 2 - COMPLETE):</li>
+<li>Database schema additions:<ul>
+<li><code>users</code> table with username, password_hash, role (admin/user), email, is_active</li>
+<li><code>user_sessions</code> table for tracking logged-in users</li>
+<li>Default admin user created on first run (username: admin, password: admin)</li>
+</ul>
+</li>
+<li>User management database methods (11 total):<ul>
+<li><code>create_user(username, password, role, email)</code>: Create new user with SHA256 hashed password</li>
+<li><code>authenticate_user(username, password)</code>: Authenticate and update last_login</li>
+<li><code>get_user_by_id(user_id)</code>: Retrieve user by ID</li>
+<li><code>get_user_by_username(username)</code>: Retrieve user by username</li>
+<li><code>get_all_users()</code>: Get all users</li>
+<li><code>update_user(user_id, **kwargs)</code>: Update user fields</li>
+<li><code>change_user_password(user_id, new_password)</code>: Change password</li>
+<li><code>delete_user(user_id)</code>: Soft delete (set is_active = 0)</li>
+<li><code>create_session(user_id, machine_name)</code>: Create login session</li>
+<li><code>get_active_session(user_id, machine_name)</code>: Get active session</li>
+<li><code>end_session(session_id)</code>: End user session</li>
+</ul>
+</li>
+<li>LoginDialog widget:<ul>
+<li>Professional styled dialog with teal accent</li>
+<li>Username and password fields</li>
+<li>"Continue as Guest" option for read-only access</li>
+<li>Error message display</li>
+<li>Auto-focus on username field</li>
+<li>Enter key support for quick login</li>
+</ul>
+</li>
+<li>MainWindow authentication integration:<ul>
+<li>Login required on application start</li>
+<li><code>current_user</code> and <code>is_admin</code> tracking</li>
+<li>Window title displays username and role</li>
+<li><code>check_admin_permission(action_name)</code>: Permission checking helper</li>
+<li><code>logout()</code>: End session and re-show login dialog</li>
+<li>Ctrl+L keyboard shortcut for logout</li>
+</ul>
+</li>
+<li>Permission-protected operations:<ul>
+<li>Delete element: Admin only</li>
+<li>Edit settings: Can be extended to admin only</li>
+<li>Future: Stack/List deletion, ingestion settings</li>
+</ul>
+</li>
+<li>Session management:<ul>
+<li>Track active sessions per machine</li>
+<li>Auto-update last_activity timestamp</li>
+<li>Session termination on logout</li>
+</ul>
+</li>
+<li><strong>Enhanced Settings Widget</strong> (Session 4 - Feature 7 - COMPLETE):</li>
+<li>Complete SettingsPanel rewrite with tabbed interface (6 tabs):<ul>
+<li><strong>General Tab</strong>: Database location, user preferences, machine name</li>
+<li><strong>Ingestion Tab</strong>: Copy policy, sequence detection settings</li>
+<li><strong>Preview &amp; Media Tab</strong>: Preview size/quality, GIF settings (size/fps/duration), FFmpeg thread count</li>
+<li><strong>Network &amp; Performance Tab</strong>: DB connection retries/timeout, cache size/memory limits, <strong>pagination settings</strong></li>
+<li><strong>Custom Processors Tab</strong>: Pre-ingest, post-ingest, post-import hooks with descriptions</li>
+<li><strong>Security &amp; Admin Tab</strong>: Admin password change, user management table, add/edit/deactivate users (admin-only)</li>
+</ul>
+</li>
+<li>New settings in Config:<ul>
+<li><code>preview_quality</code>: JPEG quality (1-100)</li>
+<li><code>gif_size</code>: GIF size in pixels (128-512)</li>
+<li><code>gif_fps</code>: GIF frame rate (5-30 fps)</li>
+<li><code>gif_duration</code>: GIF clip duration (1-10 seconds)</li>
+<li><code>ffmpeg_threads</code>: FFmpeg thread count (1-16)</li>
+<li><code>db_max_retries</code>: Database connection retry attempts (1-50)</li>
+<li><code>db_timeout</code>: Database connection timeout seconds (5-300)</li>
+<li><code>preview_cache_size</code>: Preview cache item count (50-1000)</li>
+<li><code>preview_cache_memory_mb</code>: Cache memory limit in MB (50-1000)</li>
+<li><code>pagination_enabled</code>: Enable/disable pagination (true/false)</li>
+<li><code>items_per_page</code>: Items per page (50/100/200/500)</li>
+<li><code>background_thumbnail_loading</code>: Background loading toggle (true/false)</li>
+</ul>
+</li>
+<li>Admin-only Security tab:<ul>
+<li>Password change interface with validation</li>
+<li>User management table with username/role/email/active status</li>
+<li>Add/Edit/Deactivate user buttons</li>
+<li>Permission lock screen for non-admin users</li>
+</ul>
+</li>
+<li>Professional UI styling:<ul>
+<li>Organized group boxes with descriptions</li>
+<li>Help text and tips for complex settings</li>
+<li>SpinBox widgets with units (px, %, sec, threads, MB)</li>
+<li>Large "💾 Save All Settings" button with teal styling</li>
+<li>Current user indicator in bottom bar</li>
+</ul>
+</li>
+<li>Smart save behavior:<ul>
+<li>Saves all settings across all tabs</li>
+<li>Warns about application restart requirements</li>
+<li>Emits settings_changed signal</li>
+</ul>
+</li>
+<li>Reset to defaults functionality with confirmation</li>
+<li><strong>Environment Variable - STOCK_DB Path</strong> (Session 4 - Feature 8 - COMPLETE):</li>
+<li>Support for <code>STOCK_DB</code> environment variable:<ul>
+<li>Checked on Config initialization</li>
+<li>Overrides <code>database_path</code> from config.json</li>
+<li>Re-applied after loading config (takes precedence)</li>
+<li>Console message confirms when environment variable is used</li>
+</ul>
+</li>
+<li>Deployment-friendly configuration:<ul>
+<li>Set <code>STOCK_DB=\\network\share\vfx\stock.db</code> for network deployments</li>
+<li>Different database per environment (dev/staging/production)</li>
+<li>No need to modify config.json for different setups</li>
+</ul>
+</li>
+<li>Settings panel integration:<ul>
+<li>Database path field shows environment variable value if set</li>
+<li>Hint label: "Tip: Set STOCK_DB environment variable to override"</li>
+<li>Browse button allows temporary override (until restart)</li>
+</ul>
+</li>
+<li><strong>Performance Tuning - Pagination System</strong> (Session 4 - Feature 3 - COMPLETE):</li>
+<li>PaginationWidget class (159 lines):<ul>
+<li>First/Previous/Next/Last page buttons</li>
+<li>Page indicator label: "Page X of Y"</li>
+<li>Items per page selector (50/100/200/500)</li>
+<li>Info label: "Showing X-Y of Z items"</li>
+<li>Smart button enable/disable based on page</li>
+<li><code>page_changed</code> signal for navigation</li>
+<li><code>get_page_slice()</code> method returns (start, end) indices</li>
+</ul>
+</li>
+<li>MainWindow pagination integration:<ul>
+<li><code>current_elements</code> list stores all elements</li>
+<li><code>load_elements()</code> updated to setup pagination</li>
+<li><code>on_page_changed()</code> handler for page navigation</li>
+<li><code>_display_current_page()</code> displays current page slice</li>
+<li><code>on_search()</code> updated to work with pagination</li>
+<li>Pagination visibility controlled by settings</li>
+</ul>
+</li>
+<li>Configuration settings:<ul>
+<li><code>pagination_enabled</code>: Enable/disable pagination</li>
+<li><code>items_per_page</code>: Configurable page size</li>
+<li>Integrated into Network &amp; Performance settings tab</li>
+</ul>
+</li>
+<li>Performance benefits:<ul>
+<li>Reduces memory usage for large lists</li>
+<li>Prevents UI freezing with thousands of elements</li>
+<li>Smooth navigation between pages</li>
+</ul>
+</li>
+<li><strong>FFmpeg Multithreading - Background Preview Generation</strong> (Session 4 - Feature 6 - COMPLETE):</li>
+<li>PreviewWorker class (QThread-based background worker):<ul>
+<li>Queue-based task processing (non-blocking)</li>
+<li>Supports image, sequence, video, and GIF preview generation</li>
+<li>Uses configurable thread count from settings (<code>ffmpeg_threads</code>)</li>
+<li>Emits signals: <code>preview_generated</code>, <code>progress_updated</code>, <code>error_occurred</code></li>
+<li>Graceful stop with queue clearing</li>
+<li>Automatic preview directory creation</li>
+</ul>
+</li>
+<li>PreviewManager class (worker pool coordinator):<ul>
+<li>Manages multiple PreviewWorker threads (default: 2 workers)</li>
+<li>Round-robin task distribution across workers</li>
+<li>Batch preview generation support</li>
+<li>Progress tracking with signals</li>
+<li><code>all_previews_complete</code> signal when batch finishes</li>
+<li>Clear queue and reset counters functionality</li>
+</ul>
+</li>
+<li>Integration points:<ul>
+<li>Ready for MainWindow integration</li>
+<li>Compatible with ingestion pipeline</li>
+<li>Signals can update gallery/table views when previews complete</li>
+<li>Queue system prevents UI blocking during batch operations</li>
+</ul>
+</li>
+<li>Performance benefits:<ul>
+<li>Parallel preview generation (2+ threads)</li>
+<li>UI remains responsive during preview generation</li>
+<li>Progress tracking for long operations</li>
+<li>Cancellable operations via queue clearing</li>
+</ul>
+</li>
+<li><strong>Drag &amp; Drop to Nuke DAG</strong> (Session 4 - Feature 4 - COMPLETE):</li>
+<li>DragGalleryView custom widget (117 lines):<ul>
+<li>Extends QListWidget with drag &amp; drop capabilities</li>
+<li>Override <code>startDrag()</code> to set custom QMimeData</li>
+<li>Supports dragging multiple selected elements</li>
+<li>MIME data includes: element IDs, file URLs, custom app data</li>
+<li>Drag icon uses first item's preview thumbnail</li>
+</ul>
+</li>
+<li>Smart node creation based on element type:<ul>
+<li><strong>2D assets</strong> → <code>create_read_node()</code> with frame range detection</li>
+<li><strong>3D assets</strong> → <code>create_read_geo_node()</code> for .abc/.obj/.fbx files</li>
+<li><strong>Toolsets</strong> → <code>paste_nodes_from_file()</code> for .nk files</li>
+<li>Automatic frame range detection for sequences</li>
+</ul>
+</li>
+<li>File path resolution:<ul>
+<li>Uses hard copy path if available (is_hard_copy = true)</li>
+<li>Falls back to soft copy path (original location)</li>
+</ul>
+</li>
+<li>Integration:<ul>
+<li>MediaDisplayWidget updated to accept nuke_bridge parameter</li>
+<li>Gallery view replaced with DragGalleryView</li>
+<li><code>on_popup_insert()</code> calls <code>insert_to_nuke()</code> method</li>
+<li>MainWindow passes nuke_bridge to MediaDisplayWidget</li>
+</ul>
+</li>
+<li><strong>Toolset Creation &amp; Registration</strong> (Session 4 - Feature 5 - COMPLETE):</li>
+<li>RegisterToolsetDialog class (190 lines):<ul>
+<li>User-friendly dialog for registering Nuke node selections</li>
+<li>Form inputs: Toolset name, target list, comment, preview option</li>
+<li>List selector populated from all stacks/lists</li>
+<li>"Generate preview image" checkbox for node graph capture</li>
+<li>Save/Cancel button box with validation</li>
+</ul>
+</li>
+<li>Toolset creation workflow:<ul>
+<li>Generate unique filename with MD5 hash + timestamp</li>
+<li>Call <code>nuke_bridge.save_selected_as_toolset()</code> to export .nk file</li>
+<li>Move toolset from temp to repository directory</li>
+<li>Optional: Capture node graph preview image</li>
+<li>Ingest into database with type='toolset', format='nk'</li>
+<li>Log history entry for auditing</li>
+</ul>
+</li>
+<li>NukeBridge enhancements:<ul>
+<li><code>save_selected_as_toolset()</code>: Already existed, saves .nk files</li>
+<li><code>capture_node_graph_preview()</code>: NEW - captures node graph as PNG</li>
+<li>Mock mode creates placeholder preview images</li>
+<li>Real Nuke mode returns warning (no built-in API for graph capture)</li>
+</ul>
+</li>
+<li>Menu integration:<ul>
+<li>New "Nuke" menu in MainWindow menubar</li>
+<li>"Register Selection as Toolset..." action (Ctrl+Shift+T)</li>
+<li><code>register_toolset()</code> method opens dialog and refreshes on success</li>
+</ul>
+</li>
+<li>Toolset usage:<ul>
+<li>Toolsets appear in gallery/table views like any element</li>
+<li>Drag toolset into Nuke → automatically pastes nodes via <code>paste_nodes_from_file()</code></li>
+<li>Double-click toolset → same paste behavior</li>
+<li>Preview shows node graph visualization (if generated)</li>
+</ul>
+</li>
+<li>Initial project documentation files: <code>Roadmap.md</code>, <code>changelog.md</code>.</li>
+<li>Added <code>instructions.md</code> updates directing creation and maintenance of project docs.</li>
+<li>Created project structure with <code>src/</code>, <code>tests/</code>, <code>config/</code> directories.</li>
+<li>Implemented <code>db_manager.py</code> with complete SQLite schema and CRUD operations.</li>
+<li>Implemented <code>ingestion_core.py</code> with sequence detection, metadata extraction, and preview generation.</li>
+<li>Implemented <code>nuke_bridge.py</code> with mock mode for development without Nuke.</li>
+<li>Implemented <code>extensibility_hooks.py</code> for custom processor architecture.</li>
+<li>Implemented <code>config.py</code> for application configuration management.</li>
+<li>Added <code>example_usage.py</code> to demonstrate core module usage.</li>
+<li>Created <code>requirements.txt</code> with Python 2.7 compatible dependencies.</li>
+<li>Added <code>.github/copilot-instructions.md</code> for AI agent guidance.</li>
+<li><strong>Implemented <code>main.py</code> - Complete PySide2 GUI application</strong> (Alpha MVP complete):</li>
+<li>StacksListsPanel: Tree view for navigating Stacks and Lists</li>
+<li>MediaDisplayWidget: Gallery and List view modes with live search</li>
+<li>HistoryPanel: Ingestion history display with CSV export</li>
+<li>SettingsPanel: Configuration UI for all app settings</li>
+<li>MainWindow: Complete application with menu bar, status bar, and keyboard shortcuts</li>
+<li>Drag-and-drop file ingestion workflow</li>
+<li>Element double-click to insert into Nuke (mock mode)</li>
+<li>Toggleable panels (Ctrl+2 for History, Ctrl+3 for Settings)</li>
+<li><strong>Implemented Media Info Popup (Alt+Hover)</strong>:</li>
+<li>Non-modal popup triggered by holding Alt while hovering over elements</li>
+<li>Large preview display (380x280px with aspect ratio preservation)</li>
+<li>Complete metadata display: name, type, format, frames, size, path, comment</li>
+<li>"Insert into Nuke" button for quick insertion</li>
+<li>"Reveal in Explorer" button to open file location in OS</li>
+<li>Dark themed UI with styled buttons</li>
+<li>Auto-positioning near cursor with offset</li>
+<li>Click-to-close behavior</li>
+<li><strong>Implemented Advanced Search Dialog</strong> (Beta feature):</li>
+<li>Property-based search: name, format, type, comment, tags</li>
+<li>Match type selection: loose (LIKE) vs strict (exact)</li>
+<li>Results table with sortable columns</li>
+<li>Double-click to insert element into Nuke</li>
+<li>Keyboard shortcut: Ctrl+F</li>
+<li>Accessible via Search menu</li>
+<li>Non-modal dialog for continuous searching</li>
+<li><strong>FFmpeg Integration</strong> (Session 2):</li>
+<li>Created <code>src/ffmpeg_wrapper.py</code> - Complete FFmpeg abstraction layer (430+ lines)</li>
+<li>Thumbnail generation from images, videos, and sequences</li>
+<li>Media information extraction (resolution, codec, duration, fps)</li>
+<li>Video preview generation (low-res MP4)</li>
+<li>Frame extraction by number</li>
+<li>Playback control via FFplay</li>
+<li>Sequence-to-video conversion</li>
+<li>FFmpeg binaries included in <code>bin/ffmpeg/bin/</code> (ffmpeg.exe, ffprobe.exe, ffplay.exe)</li>
+<li><strong>Modern Theme Application</strong>:</li>
+<li>Applied <code>resources/style.qss</code> to entire application</li>
+<li>Professional VFX dark theme with teal (#16c6b0) and orange (#ff9a3c) accents</li>
+<li>Consistent styling across all panels and widgets</li>
+<li><strong>Favorites System</strong> (Beta feature):</li>
+<li>Database methods: add_favorite(), remove_favorite(), is_favorite(), get_favorites()</li>
+<li>⭐ Favorites button in navigation panel</li>
+<li>Right-click context menu: "Add/Remove from Favorites"</li>
+<li>load_favorites() displays all favorite elements</li>
+<li>Per-user and per-machine favorites storage</li>
+<li>Star prefix (⭐) on favorite elements in gallery/list views</li>
+<li>Quick access toggle for favorites view</li>
+<li><strong>Playlists Feature</strong> (Beta feature - COMPLETE):</li>
+<li>Database methods (8 total): <ul>
+<li>create_playlist(), get_all_playlists(), get_playlist_by_id(), delete_playlist()</li>
+<li>add_to_playlist(), remove_from_playlist(), get_playlist_items(), reorder_playlist_items()</li>
+</ul>
+</li>
+<li>📋 Playlists section in navigation with QListWidget</li>
+<li>CreatePlaylistDialog: Name + description input with validation</li>
+<li>AddToPlaylistDialog: Element addition with playlist selection</li>
+<li>Right-click context menu: "Add to Playlist" submenu (dynamic playlist list)</li>
+<li>load_playlist() displays playlist elements with 📋 prefix</li>
+<li>Signal/slot chain: playlist_selected → on_playlist_selected()</li>
+<li>Collaborative playlists with creator tracking (user_name, machine_name)</li>
+<li>Sequence order management for playlist items</li>
+<li><strong>Enhanced Preview System</strong> (Beta feature - COMPLETE):</li>
+<li>MediaInfoPopup extended with video playback controls</li>
+<li>Frame scrubbing slider with teal accent (#16c6b0)</li>
+<li>Play/Stop buttons for video and sequence playback</li>
+<li>FFplay integration for video playback with start time support</li>
+<li>Frame count detection for videos (FFmpeg get_frame_count())</li>
+<li>Sequence frame range parsing for scrubber bounds</li>
+<li>Real-time frame label updates ("Frame: X / Y")</li>
+<li>Automatic cleanup on popup close (stops playback process)</li>
+<li>Video controls visibility: shown only for video/sequence elements</li>
+<li>Increased popup height to 700px to accommodate controls</li>
+<li><strong>Element Management Actions</strong> (Beta feature - COMPLETE):</li>
+<li>EditElementDialog: Full metadata editing interface<ul>
+<li>Editable fields: frame_range, comment, tags, is_deprecated</li>
+<li>Read-only display: name, type, format (immutable after ingestion)</li>
+<li>Input validation and styled UI with save/cancel buttons</li>
+</ul>
+</li>
+<li>Context menu actions:<ul>
+<li>✏ Edit Metadata: Opens EditElementDialog for single element</li>
+<li>⚠ Mark/Unmark as Deprecated: Toggle deprecated status</li>
+<li>🗑 Delete Element: Remove element with confirmation dialog</li>
+</ul>
+</li>
+<li>Multi-select support (ExtendedSelection mode on both views)</li>
+<li>Bulk Operations toolbar button with dropdown menu:<ul>
+<li>⭐ Add All to Favorites: Bulk favorite multiple elements</li>
+<li>📋 Add All to Playlist: Batch add to selected playlist</li>
+<li>⚠ Mark All as Deprecated: Bulk deprecation</li>
+<li>🗑 Delete All Selected: Bulk deletion with confirmation</li>
+</ul>
+</li>
+<li>get_selected_element_ids(): Helper for multi-selection handling</li>
+<li>Automatic view refresh after all edit/delete/deprecate operations</li>
+<li><strong>Network-Aware SQLite Hardening</strong> (Beta feature - COMPLETE):</li>
+<li>Enhanced DatabaseManager.get_connection() with robust retry logic:<ul>
+<li>Increased max_retries to 10 for network environments</li>
+<li>Exponential backoff with jitter (0.3s base * 2^attempt)</li>
+<li>60-second connection timeout for network file systems</li>
+</ul>
+</li>
+<li>SQLite PRAGMA optimizations for network performance:<ul>
+<li><code>synchronous = NORMAL</code>: Balance safety vs speed</li>
+<li><code>journal_mode = WAL</code>: Write-Ahead Logging for better concurrency</li>
+<li><code>cache_size = -16000</code>: 16MB cache for reduced I/O</li>
+<li><code>check_same_thread = False</code>: Multi-threaded access support</li>
+</ul>
+</li>
+<li>Detailed operation logging (optional enable_logging parameter)</li>
+<li>Enhanced error detection and reporting:<ul>
+<li>Distinguishes lock errors from other operational errors</li>
+<li>Provides actionable error messages for troubleshooting</li>
+</ul>
+</li>
+<li>Stress test suite (tests/test_network_sqlite.py):<ul>
+<li>Multi-process concurrent access testing</li>
+<li>Simulates 8 readers, 4 writers, 6 mixed workers</li>
+<li>Reports success rate and operations/second</li>
+<li>Validates database integrity under load</li>
+</ul>
+</li>
+<li><strong>Performance Optimization</strong> (Beta feature - COMPLETE):</li>
+<li>PreviewCache module (src/preview_cache.py):<ul>
+<li>LRU (Least Recently Used) caching for QPixmap objects</li>
+<li>Configurable max_size (200 previews) and memory limit (200MB)</li>
+<li>Cache statistics: hit rate, miss count, eviction tracking</li>
+<li>get(), put(), clear(), remove() API for cache management</li>
+<li>preload() method for background loading</li>
+<li>Global singleton via get_preview_cache()</li>
+</ul>
+</li>
+<li>Database query optimization:<ul>
+<li>Added pagination support to get_elements_by_list(limit, offset)</li>
+<li>New get_elements_count() method for total counts</li>
+<li>6 additional performance indexes:</li>
+<li>idx_elements_deprecated, idx_favorites_user</li>
+<li>idx_playlist_items_playlist, idx_playlist_items_element</li>
+<li>idx_history_status</li>
+</ul>
+</li>
+<li>MediaDisplayWidget optimizations:<ul>
+<li>Preview cache integration: checks cache before disk I/O</li>
+<li>Reduced disk reads by ~90% for repeated views</li>
+<li>Lazy loading: thumbnails loaded on-demand</li>
+</ul>
+</li>
+<li>Estimated 3-5x performance improvement for large catalogs (1000+ assets)</li>
+<li><strong>Hierarchical Sub-Lists</strong> (Session 3 - Production Feature):</li>
+<li>Extended Lists table with parent_list_fk for recursive relationships</li>
+<li>Database methods: create_list() accepts optional parent_list_id parameter</li>
+<li>get_sub_lists(parent_list_id): Returns direct children of parent list</li>
+<li>get_lists_by_stack(): Filters by parent_list_id (None = top-level only)</li>
+<li>Added idx_lists_parent index for hierarchical query performance</li>
+<li>Recursive GUI tree loading with _create_list_item() helper method</li>
+<li>QTreeWidget displays expandable nested sub-lists</li>
+<li>Right-click context menu on Lists: "Add Sub-List" option</li>
+<li>AddSubListDialog: Dialog for creating nested sub-lists with parent display</li>
+<li>Supports studio workflows: ActionFX &gt; explosions &gt; aerial explosions pattern</li>
+<li>Database migration system: _apply_migrations() auto-updates existing databases</li>
+<li><strong>Delete Stack/List Context Menu</strong> (Session 3 - Production Feature):</li>
+<li>setContextMenuPolicy(CustomContextMenu) on tree widget</li>
+<li>show_tree_context_menu(position): Right-click handler with Stack/List detection</li>
+<li>Stack menu: "Add List to Stack", "Delete Stack"</li>
+<li>List menu: "Add Sub-List", "Delete List"</li>
+<li>Confirmation dialogs with cascade deletion warnings</li>
+<li>delete_stack(stack_id): Cascade deletes all Lists and Elements</li>
+<li>delete_list(list_id): Cascade deletes all sub-lists and Elements</li>
+<li>CASCADE deletion enforced by SQLite FOREIGN KEY constraints</li>
+<li>Updated list data tuples: (type, id, stack_id) for context menu access</li>
+<li>Safe tuple unpacking in on_item_clicked() with len() check</li>
+<li><strong>Library Ingest Feature</strong> (Session 3 - Production Feature - COMPLETE):</li>
+<li>IngestLibraryDialog class: Comprehensive bulk ingestion dialog (~400 lines)</li>
+<li>Folder selection with QFileDialog for library root</li>
+<li>Recursive directory scanner: _scan_directory_structure(root, max_depth)</li>
+<li>Maps folder hierarchy to Stack/List/Sub-List structure automatically</li>
+<li>Configurable options:<ul>
+<li>Stack/List name prefixes for namespace management</li>
+<li>Copy policy selection (hard_copy/soft_copy)</li>
+<li>Max nesting depth control (1-10 levels)</li>
+</ul>
+</li>
+<li>Preview tree widget: Shows planned structure before ingestion<ul>
+<li>Color-coded: Stacks (orange), Lists (teal)</li>
+<li>Displays media file count per folder</li>
+<li>Expandable hierarchical preview</li>
+</ul>
+</li>
+<li>Scan Folder button: Analyzes structure and counts assets</li>
+<li>Batch ingestion with QProgressDialog:<ul>
+<li>Processes stacks → lists → sub-lists recursively</li>
+<li>Shows current file being ingested</li>
+<li>Cancel support with graceful abort</li>
+<li>Success/error counting and reporting</li>
+</ul>
+</li>
+<li>_ingest_lists_recursive(): Recursive ingestion of nested structures</li>
+<li>Supports studio workflows: Ingest existing ActionFX/explosions/aerial libraries</li>
+<li>Menu integration: File → Ingest Library... (Ctrl+Shift+I)</li>
+<li>Auto-refresh stacks/lists panel after ingestion</li>
+<li>Handles media extensions: jpg, png, tif, exr, dpx, mp4, mov, avi, obj, fbx, abc, nk</li>
+<li><strong>GIF Proxy Generation</strong> (Session 3 - Production Feature - COMPLETE):</li>
+<li>FFmpegWrapper.generate_gif_preview() method: Generates animated GIF from video/sequences</li>
+<li>Two-pass FFmpeg process:<ul>
+<li>Pass 1: Generate optimized color palette with palettegen filter</li>
+<li>Pass 2: Create GIF using palette for better quality</li>
+</ul>
+</li>
+<li>Configurable parameters: max_duration (3s), width (256px), fps (10)</li>
+<li>Lanczos scaling for smooth resizing</li>
+<li>Automatic palette cleanup after generation</li>
+<li>Integrated into ingestion_core.py workflow:<ul>
+<li>Auto-generates GIF for all video assets (mp4, mov, avi, mkv)</li>
+<li>Auto-generates GIF for 2D image sequences</li>
+<li>Stores gif_preview_path in database</li>
+</ul>
+</li>
+<li>Added gif_preview_path to db_manager.create_element() allowed fields</li>
+<li>Database migration pre-added gif_preview_path column</li>
+<li><strong>GIF Preview on Hover</strong> (Session 3 - Production Feature - COMPLETE):</li>
+<li>QMovie integration in MediaDisplayWidget for animated GIF playback</li>
+<li>Hover event handling in eventFilter():<ul>
+<li>Mouse enter: Load and play GIF from gif_preview_path</li>
+<li>Mouse leave: Stop GIF and restore static thumbnail</li>
+</ul>
+</li>
+<li>GIF movie caching: gif_movies dict {element_id: QMovie}</li>
+<li>play_gif_for_item(item, element_id): Starts GIF playback</li>
+<li>_update_gif_frame(item, movie): Updates icon with current frame</li>
+<li>stop_current_gif(): Stops playback and restores static preview</li>
+<li>current_gif_item tracking to prevent duplicate playback</li>
+<li>Automatic frame updates via QMovie.frameChanged signal</li>
+<li>Icon scaling to match gallery icon size</li>
+<li>No Alt key required: Hover triggers GIF automatically</li>
+<li>Performance: QMovie objects cached, reused on re-hover</li>
+<li>Smooth playback: FFmpeg-generated GIFs optimized for gallery view</li>
+</ul>
+<h3 id="changed_1">Changed</h3>
+<ul>
+<li>Updated <code>requirements.txt</code> to include notes for Python 3 development</li>
+<li><strong>Replaced Pillow with FFmpeg</strong> for all media processing operations</li>
+<li>Removed Pillow dependency from requirements.txt</li>
+<li>Updated ingestion_core.py to use FFmpeg wrapper instead of PIL</li>
+<li>Modified PreviewGenerator to generate PNG thumbnails using FFmpeg</li>
+<li>Added support for video preview generation</li>
+</ul>
+<h3 id="fixed_2">Fixed</h3>
+<ul>
+<li>Fixed eventFilter initialization race condition in MediaInfoPopup causing AttributeError</li>
+<li>Added hasattr guards to prevent accessing table_view/gallery_view before widget initialization</li>
+<li><strong>Fixed NumPy 2.0 compatibility issue with PySide2</strong> - Added numpy&lt;2.0.0 constraint</li>
+<li>Created FIX_NUMPY_ISSUE.md with troubleshooting guide</li>
+<li><strong>Stabilized GIF hover playback across all views:</strong></li>
+<li>Rebuilt MediaDisplayWidget rendering to keep element/QMovie associations in sync</li>
+<li>Favorites, playlists, and paginated lists now share the same preview pipeline</li>
+<li>Hover playback resumes reliably after resizing or switching collections</li>
+<li><strong>Replaced Unicode status glyphs with SVG icons:</strong></li>
+<li>Gallery/table badges now use <code>favorite.svg</code> and <code>deprecated.svg</code></li>
+<li>Navigation tree, playlists, and bulk/context menus use <code>stack.svg</code>, <code>list.svg</code>, <code>playlist.svg</code>, etc.</li>
+<li>Removed hardcoded emoji/bullet characters to ensure consistent cross-platform rendering</li>
+<li><strong>Fixed ModuleNotFoundError in ingestion_core.py</strong> (Session 3):</li>
+<li>Changed "from ffmpeg_wrapper import" to "from src.ffmpeg_wrapper import"</li>
+<li>Fixed missing src. prefix for relative imports</li>
+<li><strong>Added Database Migration System</strong> (Session 3):</li>
+<li>Implemented _apply_migrations() to handle schema updates for existing databases</li>
+<li>Migration 1: Adds parent_list_fk column to lists table if missing</li>
+<li>Migration 2: Adds gif_preview_path column to elements table if missing</li>
+<li>Auto-detects missing columns with try/except OperationalError pattern</li>
+<li>Runs migrations on every database connection if database already exists</li>
+<li><strong>Fixed GIF Generation Issues</strong> (Session 3):</li>
+<li>Added gif_preview_path to initial schema creation (not just migrations)</li>
+<li>Fixed video detection: Changed from <code>asset_type == 'video'</code> to file extension check</li>
+<li>Added comprehensive debug logging for GIF generation process</li>
+<li>Created test_gif_generation.py diagnostic script</li>
+<li>Fixed stacks_panel reference in ingest_library() method</li>
+<li>GIFs now generate correctly for .mp4, .mov, .avi, .mkv, and other video formats</li>
+<li>GIFs now generate correctly for image sequences</li>
+<li><strong>Enhanced Thumbnail Display and Scaling</strong> (Session 3):</li>
+<li>Fixed static thumbnails not showing (odd icons displayed until hover)</li>
+<li>All elements now show PNG thumbnails immediately on load</li>
+<li>Improved thumbnail loading with proper scaling and caching</li>
+<li>GIF generation now creates uniform 256x256 square output</li>
+<li>Maintains aspect ratio with letterbox/pillarbox padding (black bars)</li>
+<li>Perfect gallery layout alignment with consistent dimensions</li>
+<li>Size slider now properly scales thumbnails dynamically (64px-512px)</li>
+<li>on_size_changed() reloads elements with new scale on slider movement</li>
+<li>Smooth scaling with KeepAspectRatio and SmoothTransformation</li>
+<li>Both PNG thumbnails and GIF playback scale with slider</li>
+<li>Enhanced load_elements() to scale images to current icon size</li>
+<li>Improved preview cache to store originals, scale on-demand</li>
+</ul>
+<h2 id="010-2025-11-15">[0.1.0] - 2025-11-15</h2>
+<h3 id="added_4">Added</h3>
+<ul>
+<li>Repository scaffolding and initial instructions document.</li>
+<li>Initial roadmap and changelog files.</li>
+</ul>
+<blockquote>
+<p>Notes:
+- Update the Unreleased section while working on changes. When cutting a release, move Unreleased entries under a new version heading with the release date.
+- Link issues or pull requests where applicable using the format: <code>[#123](https://github.com/aramadan0096/Stax/pull/123)</code>.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

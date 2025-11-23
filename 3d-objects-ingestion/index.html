@@ -1,0 +1,986 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Official documentation for the StaX project.">
+      
+      
+      
+        <link rel="canonical" href="https://aramadan0096.github.io/stax-docs/3d-objects-ingestion/">
+      
+      
+        <link rel="prev" href="../AdvancedFeatures/">
+      
+      
+        <link rel="next" href="../Troubleshooting/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>3D Ingestion - StaX Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="#123a58" data-md-color-accent="#123a58">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3d-mesh-ingestion" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="StaX Documentation" class="md-header__button md-logo" aria-label="StaX Documentation" data-md-component="logo">
+      
+  <img src="../assets/docs.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            StaX Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3D Ingestion
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/aramadan0096/Stax" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="StaX Documentation" class="md-nav__button md-logo" aria-label="StaX Documentation" data-md-component="logo">
+      
+  <img src="../assets/docs.svg" alt="logo">
+
+    </a>
+    StaX Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/aramadan0096/Stax" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HowStaXWorks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How StaX Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KeyboardShortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard Shortcuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NukePluginUsage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nuke Plugin Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AdvancedFeatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3D Ingestion
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3D Ingestion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-the-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of the pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-details-and-developer-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design details and developer notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run-a-conversion-manually-developer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to run a conversion manually (developer)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewer-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewer details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thumbnailing-and-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thumbnailing and UI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extending-the-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extending the pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-quick-check-list-manual-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Developer quick check list (manual tests)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-and-diagnostics-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log and diagnostics tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-and-caveats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes and caveats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact-further-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contact &amp; further help
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-the-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of the pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-details-and-developer-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design details and developer notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run-a-conversion-manually-developer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to run a conversion manually (developer)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewer-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewer details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thumbnailing-and-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thumbnailing and UI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extending-the-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extending the pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-quick-check-list-manual-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Developer quick check list (manual tests)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-and-diagnostics-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log and diagnostics tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-and-caveats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes and caveats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact-further-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contact &amp; further help
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="3d-mesh-ingestion">3D Mesh Ingestion</h1>
+<p>This document describes how StaX converts, ingests, and previews 3D mesh assets (GLB/OBJ/FBX/Alembic/etc.). It explains the conversion pipeline, ingestion flow, the WebGL preview server/viewer, runtime configuration, troubleshooting steps, and developer notes so contributors can understand and extend the behavior.</p>
+<p><img alt="StaX graph" src="../assets/images/3d_viewer.gif" /></p>
+<p><strong>Why this matters</strong>
+- 3D assets come in many formats with different exporters and quirks. StaX centralizes conversion into GLB for consistent WebGL previewing and downstream insertion/processing.</p>
+<p><strong>Key files &amp; locations</strong>
+- <code>src/glb_converter.py</code> — High-level conversion helpers and fallback logic.
+- <code>dependencies/blender/convert_to_glb.py</code> — Production Blender-side conversion script (invoked via Blender CLI).
+- <code>src/ingestion_core.py</code> — Ingestion pipeline and conversion invocation wrappers (streams Blender stdout to ingestion progress/notes).
+- <code>src/geometry_viewer.py</code> — Local threaded HTTP server + Qt <code>GeometryViewerWidget</code> (uses QtWebEngine to load the WebGL viewer).
+- <code>resources/geometry_viewer/index.html</code> — Web viewer that loads the GLB via an authenticated endpoint.
+- <code>src/video_player_widget.py</code> — Integrates geometry viewer into the preview pane.
+- <code>src/ui/media_display_widget.py</code> — Thumbnail generation (square 1:1 pipeline) and placeholder handling.
+- <code>src/nuke_bridge.py</code> — Nuke insert/register functions (toolsets use <code>nuke.svg</code> placeholder).</p>
+<h2 id="overview-of-the-pipeline">Overview of the pipeline</h2>
+<ol>
+<li>User triggers ingestion (single-file ingest or bulk library ingestion).</li>
+<li><code>IngestionCore.ingest_file(...)</code> executes. It decides the file type and copy policy.</li>
+<li>For geometry files that are not already GLB, the ingestion path calls a conversion helper (via <code>_convert_geometry_asset</code> / <code>glb_converter.convert_to_glb</code>) which attempts:</li>
+<li>Primary: Run Blender as a CLI process that executes the bundled script <code>dependencies/blender/convert_to_glb.py</code> to export a GLB.</li>
+<li>Fallback: If the Blender export fails, attempt a Python-level fallback using libraries such as <code>trimesh</code> / <code>pygltflib</code> (when available) to read and re-export.</li>
+<li>Blender conversion is run in streaming mode: the ingestion wrapper reads Blender stdout/stderr, writes progress notes to the ingestion progress mechanism, and enforces an idle timeout to avoid hangs.</li>
+<li>The GLB output is written to the configured previews directory (used by the viewer). The ingestion then continues with thumbnail generation and database cataloging.</li>
+<li>When a user selects the element in the UI, the <code>GeometryViewerServer</code> exposes a short-lived tokenized endpoint <code>/model/&lt;token&gt;</code> that streams the GLB; <code>GeometryViewerWidget</code> (Qt WebEngine) loads <code>resources/geometry_viewer/index.html?model=/model/&lt;token&gt;</code> to render it in WebGL.</li>
+</ol>
+<h2 id="design-details-and-developer-notes">Design details and developer notes</h2>
+<ul>
+<li>Blender-first approach: The project bundles a robust Blender conversion script (copied from the test suite) that iteratively strips unsupported export kwargs and retries exports until a supported combination succeeds. This gives the best fidelity for formats like FBX, OBJ, Alembic.</li>
+<li>Streaming output: <code>IngestionCore</code> contains a helper (<code>_run_blender_cli_conversion</code> or similar) that launches Blender and pumps its stdout into the UI ingestion progress notes in realtime. This provides user feedback while conversion runs.</li>
+<li>Idle timeout: Conversions include an idle timeout (configurable via <code>blender_idle_timeout</code>) to abort stale conversions that produce no output for a long time.</li>
+<li>Tokenized model endpoints: To avoid direct file paths and enable ephemeral access, the <code>GeometryViewerServer</code> serves a tokenized route that maps to a temporary GLB stream; tokens are short-lived and tied to the running process.</li>
+<li>Viewer assets: The Web viewer depends on the cgwire <code>js-3d-model-viewer</code> library (https://cgwire.github.io/js-3d-model-viewer/) — this library is bundled under <code>dependencies/</code> and is loaded by the small HTML wrapper (<code>resources/geometry_viewer/index.html</code>). The Qt <code>QWebEngineView</code> loads this page locally via the internal HTTP server.</li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<ul>
+<li><code>config.json</code> and the runtime <code>Config</code> object can include these keys (examples):</li>
+<li><strong><code>blender_path</code></strong>: Optional. Full path to Blender executable. If unset, the system <code>blender</code> on PATH is used.</li>
+<li><strong><code>blender_idle_timeout</code></strong>: Idle timeout in seconds for Blender conversions (defaults present in code; e.g. 900s).</li>
+<li><strong><code>previews_path</code></strong>: Directory where GLB preview files are written and served from.</li>
+<li><strong><code>nuke_mock_mode</code></strong>: If true, Nuke integration is mocked.</li>
+</ul>
+<h2 id="how-to-run-a-conversion-manually-developer">How to run a conversion manually (developer)</h2>
+<ul>
+<li>To test Blender conversion manually without running the UI:</li>
+<li>Ensure Blender is in PATH or set <code>blender_path</code> to its executable.</li>
+<li>Run Blender in background with the conversion script: (PowerShell)</li>
+</ul>
+<pre><code class="language-powershell">blender --background --python dependencies\blender\convert_to_glb.py -- &quot;C:\path\to\asset.fbx&quot; &quot;C:\temp\out.glb&quot;
+</code></pre>
+<ul>
+<li>The script prints export attempts and warnings; it will write the GLB at the target path on success.</li>
+</ul>
+<h2 id="viewer-details">Viewer details</h2>
+<ul>
+<li>The <code>GeometryViewerServer</code> exposes:</li>
+<li><code>GET /viewer/index.html</code> (static viewer client)</li>
+<li><code>GET /model/&lt;token&gt;</code> streams a GLB backing file mapped to the token</li>
+<li><code>GeometryViewerWidget</code> wraps a <code>QWebEngineView</code>, loads the viewer HTML with the model token query param, and manages server lifecycle.</li>
+<li>The viewer uses the GLB middle-frame for sequences (if ingestion produced GLB from an image sequence) and ensures typical PBR support via the <code>js-3d-model-viewer</code> capabilities.</li>
+</ul>
+<h2 id="thumbnailing-and-ui">Thumbnailing and UI</h2>
+<ul>
+<li>StaX generates a fixed square 1:1 thumbnail pipeline for gallery consistency. Thumbnails are built via <code>_build_fixed_thumbnail(pixmap, size)</code> in <code>src/ui/media_display_widget.py</code>.</li>
+<li>Placeholders (e.g., <code>nuke.svg</code>, <code>cube.svg</code>) are passed through the same pipeline to ensure consistent layout and sizing.</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li>Blender conversion stalls or hangs:</li>
+<li>Check <code>blender_path</code> configuration and ensure Blender is accessible.</li>
+<li>Re-run conversion manually with the command shown above to capture Blender stdout/stderr.</li>
+<li>Increase <code>blender_idle_timeout</code> in config if Blender legitimately takes long.</li>
+<li>No preview visible in UI (geometry not rendering):</li>
+<li>Confirm GLB exists in <code>previews_path</code> for the ingested element.</li>
+<li>Check application logs for <code>GeometryViewerServer</code> token generation and <code>/model/&lt;token&gt;</code> requests.</li>
+<li>Ensure QtWebEngine is available in your Python environment (PySide2 with QtWebEngine).</li>
+<li>Preview appears as broken or empty:</li>
+<li>Try opening the GLB in an external viewer (e.g., https://gltf-viewer.donmccurdy.com/) to validate the GLB itself.</li>
+<li>If external viewer works, check console output of the embedded WebEngine (enable remote debugging or inspect logs) to find runtime WebGL errors.</li>
+</ul>
+<h2 id="extending-the-pipeline">Extending the pipeline</h2>
+<ul>
+<li>Add format-specific pre-processing hooks in <code>src/ingestion_core.py</code> to run before conversion (e.g., clean up FBX nodes). Use <code>ProcessorManager</code> hooks for pre/post-ingest processors.</li>
+<li>To add an additional fallback (e.g., Blender + FBX SDK), update <code>src/glb_converter.py</code> to include a new branch in <code>convert_to_glb()</code> that tries the SDK path before Python fallbacks.</li>
+<li>To change viewer features (e.g., add camera presets, lighting controls), edit <code>resources/geometry_viewer/index.html</code> and the bundled <code>js-3d-model-viewer</code> configuration.</li>
+</ul>
+<h2 id="developer-quick-check-list-manual-tests">Developer quick check list (manual tests)</h2>
+<ul>
+<li>Ingest a <code>.glb</code> file: should skip conversion and produce preview immediately.</li>
+<li>Ingest a <code>.fbx</code> file: should run Blender conversion, stream logs into the ingestion progress, and produce GLB preview when done.</li>
+<li>With a converted GLB in previews, select the element in the UI and confirm the <code>GeometryViewerWidget</code> loads and displays the model.</li>
+<li>If conversion fails, inspect ingestion notes/logs for Blender stdout and fallback attempts.</li>
+</ul>
+<h2 id="log-and-diagnostics-tips">Log and diagnostics tips</h2>
+<ul>
+<li>Ingestion logs will include streaming Blender stdout lines and conversion attempt messages. Look for export attempt messages in <code>dependencies/blender/convert_to_glb.py</code> style logs.</li>
+<li>Server-side viewer logs: the HTTP server will log requests to <code>/model/&lt;token&gt;</code>; token mapping errors indicate either missing GLB or expired token.</li>
+</ul>
+<h2 id="notes-and-caveats">Notes and caveats</h2>
+<ul>
+<li>The project aims for robust Blender-first conversion for fidelity, but this depends on a working Blender CLI in the runtime environment.</li>
+<li>Some Python libraries used for fallbacks (<code>trimesh</code>, <code>pygltflib</code>) may not be available in every environment; treat them as optional fallbacks.</li>
+<li>The ingestion pipeline is written to stream and report progress; tune <code>blender_idle_timeout</code> conservatively for large conversions.</li>
+</ul>
+<h2 id="contact-further-help">Contact &amp; further help</h2>
+<ul>
+<li>If you need changes to conversion heuristics or want to add support for more formats, open an issue or a PR and reference this document. For urgent debugging, run the manual Blender conversion command and attach Blender stdout/stderr logs.</li>
+</ul>
+<hr />
+<p>File created: <code>docs/3D_Mesh_Ingestion.md</code> — please tell me if you'd like this added to <code>README.md</code>, linked from the app Help menu, or expanded with code snippets from the actual functions.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

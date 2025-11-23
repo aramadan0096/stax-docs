@@ -18,7 +18,7 @@ nuke_launcher.show_stax_panel()
 ```
 
 ### Inserting Assets into Nuke
-
+![StaX graph](assets/images/StaX-mian-nuke-pane.png)
 **Method 1: Drag and Drop**
 1. Select element(s) in the StaX panel
 2. Drag them into the Node Graph
@@ -45,6 +45,8 @@ Save your Nuke node setups as reusable assets:
 5. StaX saves the .nk file and catalogs it as an element
 
 Toolsets can then be dragged back into any Nuke session.
+
+![StaX graph](assets/images/StaX-mian-nuke-toolset-registration.png) 
 
 ### Quick Actions
 

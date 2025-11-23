@@ -12,6 +12,7 @@ nav:
   - Keyboard Shortcuts: KeyboardShortcuts.md
   - Nuke Plugin Usage: NukePluginUsage.md
   - Advanced Features: AdvancedFeatures.md
+  - 3D Ingestion: 3d-objects-ingestion.md
   - Troubleshooting: Troubleshooting.md
 theme:
   name: material
